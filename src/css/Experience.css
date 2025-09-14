@@ -1,0 +1,59 @@
+.experience-top-container{
+	height: 100vh;
+	background-color: var(--secondary-bg-color);
+	display: flex;
+	padding: 10%;
+	gap: 60px;
+}
+
+.experience-left-panel{
+	flex: 1 0 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.4em;
+	overflow: visible;
+}
+
+.experience-right-panel{
+	flex: 3 0 0;
+	background-color: var(--primary-bg-color);
+	padding: 20px;
+	border-radius: 20px;
+	border: 1px solid grey;
+}	
+
+.experience-header{
+	text-align: center;
+	text-decoration: underline;
+	text-underline-offset: 10px;
+	/* text-underline-thickness: 50px; */
+}
+
+.experience-button{
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 15px;
+	margin: 0 5px;
+	color: grey;
+	border-color: grey;
+	background-color: var(--primary-bg-color);
+
+	transition:
+		transform 0.35s linear 0.5s,
+		outline-offset 0s linear 0.3s;
+		
+}
+
+.experience-button.active,
+.experience-button.active:focus{
+	background-color: black;
+	outline: 0.15em solid grey;
+  	outline-offset: 2px;
+	color: white !important;	
+}
+
+.experience-button:hover{
+	transform: scale(1.03);
+	color: black;
+	border-color: black;
+}

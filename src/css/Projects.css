@@ -1,0 +1,43 @@
+.projects-top-container{
+	height: 80vh;
+	width: 100%;
+	display: inline-flex;
+	background-color: rebeccapurple;
+
+}
+
+.projects-track-container{
+	height: 100%;
+	display: inline-flex;
+	overflow: visible;
+	white-space: nowrap;
+	background-color: brown;
+	gap: 50%;
+}
+
+.projects-track{
+	height: 100%;
+	display: inline-flex;
+	animation: scroll 5s linear infinite;
+	/* margin-right: 100%; */
+
+}
+
+.projects-modal-box{
+	height: 70%;
+	min-height: 200px;
+	/* width: 40%; */
+	min-width: 300px;
+	background-color: aqua;
+	/* animation: scroll 10s linear infinite; */
+	margin: 1rem;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

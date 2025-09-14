@@ -1,0 +1,37 @@
+.about-me-top-container{
+	display: flex;
+	height: 65vh;
+	width: 100%;
+	background-color: var(--primary-bg-color);
+}
+
+.about-me-left-panel{
+	flex: 0 0 60%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-end;
+	padding: 5%;
+}
+
+.about-me-right-panel{
+	flex: 0 0 40%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.about-me-text{
+	max-width: 400px;
+}
+
+.expertese-container{
+	width: 70%;
+	max-width: 70%;
+	height: 70%;
+	max-height: 70%;
+	background-color: var(--secondary-bg-color);
+	border: 1px solid var(--secondary-border-color);
+	border-radius: 8%;
+	margin: 5% 0 0 0;
+}

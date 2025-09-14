@@ -1,0 +1,41 @@
+.hero-background{
+	background: linear-gradient(to right, #043b94, #0b1930);
+	background: linear-gradient(to right, #0b1930 0%, #0b1930 40%, #11171e 40%, #11171e 100%);
+}
+
+.top-container{
+	display: flex;
+	/* justify-content: center; */
+	/* align-items: center; */
+}
+
+.left-panel{
+	flex-grow: 2;
+	background-color: var(--secondary-bg-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.right-panel{
+	flex-grow: 3;
+	background-color: var(--primary-bg-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.dev-objectives-paragraph{
+	max-width: 600px;
+	margin: 0, 10%, 0, 10%;
+}
+
+.headshot{
+	width: 200px;
+	border-radius: 80%;
+}
+
+.icon{
+	width: 50px;
+	height: 50px;
+}
