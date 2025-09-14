@@ -1,8 +1,23 @@
 .experience-top-container{
-	height: 100vh;
+	min-height: 100vh;
 	background-color: var(--secondary-bg-color);
 	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 	padding: 10%;
+}
+
+.experience-header{
+	text-align: center;
+	text-decoration: underline;
+	text-underline-offset: 10px;
+	flex: 0;
+	margin-bottom: 1em;
+	margin-left: 10px;
+}
+
+.experience-panel-container{
+	display: flex;	
 	gap: 60px;
 }
 
@@ -15,18 +30,13 @@
 }
 
 .experience-right-panel{
-	flex: 3 0 0;
 	background-color: var(--primary-bg-color);
 	padding: 20px;
 	border-radius: 20px;
 	border: 1px solid grey;
-}	
-
-.experience-header{
-	text-align: center;
-	text-decoration: underline;
-	text-underline-offset: 10px;
-	/* text-underline-thickness: 50px; */
+	display: flex;
+	flex-direction: column;
+	flex: 3 0 0;
 }
 
 .experience-button{
@@ -56,4 +66,45 @@
 	transform: scale(1.03);
 	color: black;
 	border-color: black;
+}
+
+.experience-time-location-container{
+	margin-bottom: 1.5em;
+	display: flex;
+	align-items: center;
+	gap: 1.5em;
+}
+.experience-time-location-bar{
+	display: flex;
+	align-items: center;
+	gap: 0.35em;
+}
+
+.key-projects-group-container{
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+.key-projects-item-container{
+	background-color: var(--secondary-bg-color);
+	border-radius: 10px;
+	padding: 1em;
+}
+
+ul.custom-list li {
+	list-style: none;
+	position: relative;
+	padding-left: 25px;
+}
+
+ul.custom-list li::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0.2em;
+	width: 16px;
+	height: 16px;
+	background: url('../assets/bullet-point.png') no-repeat center;
+	background-size: contain;
 }

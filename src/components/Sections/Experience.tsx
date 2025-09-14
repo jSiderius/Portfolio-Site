@@ -1,65 +1,84 @@
 import "../../css/Experience.css";
+import { FaCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { CiLocationOn } from "react-icons/ci";
 import { useState } from "react";
 import type { ExperienceEntry } from "../../models/ExperienceEntry";
 import { experiences } from "../../data/ExperienceData";
 
-function Experience() {
+export default function Experience() {
   const [selected, setSelected] = useState<ExperienceEntry | null>(
     experiences[0]
   );
+
+  function LeftPanel() {
+    return (
+      <div className="experience-left-panel">
+        {experiences.map((exp) => (
+          <button
+            key={exp.id}
+            onClick={() => setSelected(exp)}
+            className={`experience-button ${
+              selected?.id === exp.id ? "active" : ""
+            }`}
+          >
+            {exp.role}
+          </button>
+        ))}
+      </div>
+    );
+  }
+
+  function RightPanel() {
+    return (
+      <div className="experience-right-panel">
+        {selected && (
+          <>
+            <h2>
+              {selected.role} @ {selected.company}
+            </h2>
+
+            <p className="experience-time-location-container">
+              <span className="experience-time-location-bar">
+                <FaCalendarAlt />
+                {selected.timePeriod}
+              </span>
+
+              <span className="experience-time-location-bar">
+                <FaMapMarkerAlt />
+                {selected.workLocationType}
+              </span>
+            </p>
+
+            <ul className="custom-list">
+              {selected.resumeBullets.map((bullet) => (
+                <li>{bullet}</li>
+              ))}
+            </ul>
+
+            <h4 style={{ marginTop: ".5em" }}>Key Projects:</h4>
+            <div className="key-projects-group-container">
+              {selected.keyProjects.map((proj) => (
+                <div className="key-projects-item-container">
+                  <h5>{proj.name}</h5>
+                  <p>{proj.synopsis}</p>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+      </div>
+    );
+  }
+
   return (
     <>
-      <ExperienceHeader />
       <section className="experience-top-container">
-        <div className="experience-left-panel">
-          {experiences.map((exp) => (
-            <button
-              key={exp.id}
-              onClick={() => setSelected(exp)}
-              className={`experience-button ${
-                selected?.id === exp.id ? "active" : ""
-              }`}
-            >
-              {exp.role}
-            </button>
-          ))}
-        </div>
-        <div className="experience-right-panel">
-          {selected && (
-            <>
-              <h2>
-                {selected.role} @ {selected.company}
-              </h2>
-              <p>
-                {selected.timePeriod} – {selected.workLocationType}
-              </p>
-
-              <ul>
-                {selected.resumeBullets.map((bullet) => (
-                  <li>{bullet}</li>
-                ))}
-              </ul>
-
-              <h3>Key Projects</h3>
-              <ul>
-                {/* {selected.keyProjects.map((proj, i) => (
-                  <li key={i}>{proj}</li>
-                ))} */}
-              </ul>
-            </>
-          )}
+        <h1 className="experience-header">Experience</h1>
+        <div className="experience-panel-container">
+          <LeftPanel />
+          <RightPanel />
         </div>
       </section>
     </>
   );
 }
-
-function ExperienceHeader() {
-  return (
-    <>
-      <h1 className="experience-header">Experience</h1>
-    </>
-  );
-}
-
-export default Experience;

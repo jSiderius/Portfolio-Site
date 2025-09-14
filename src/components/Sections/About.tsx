@@ -6,7 +6,7 @@ function About() {
       <section className="about-me-top-container">
         <div className="about-me-left-panel">
           <div className="about-me-text">
-            <h2>About Me</h2>
+            <h2 className="experience-header">About Me</h2>
             <p>
               This it the first paragraph in the about me section This it the
               first paragraph in the about me section This it the first

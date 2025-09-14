@@ -11,7 +11,24 @@ export const experiences: ExperienceEntry[] = [
 		timePeriod: "August 2025 - Present",
 		workLocationType: "Hybrid",
 		resumeBullets: ["This is bullet point number 1", "This is bullet point number 2 This is bullet point number 2 This is bullet point number 2 This is bullet point number 2 This is bullet point number 2 ", "Bullet 3"],
-		keyProjects: [],
+		keyProjects: [
+			{
+				name: "Project 1",
+				synopsis: "This is some basic information about the project and what I worked on and the results it accomplished"
+			},
+			{
+				name: "Project 2",
+				synopsis: "This is some basic information about the project and what I worked on and the results it accomplished"
+			},
+			{
+				name: "Project 3",
+				synopsis: "This is some basic information about the project and what I worked on and the results it accomplished"
+			},
+			{
+				name: "Project 4",
+				synopsis: "This is some basic information about the project and what I worked on and the results it accomplished"
+			}
+		],
 	},
 	{
 		id: 2,
