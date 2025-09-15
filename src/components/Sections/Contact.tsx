@@ -8,12 +8,15 @@ function Contact() {
         <UserInputPanel />
         <div className="contact-socials-container">
           <div className="d-flex justify-content-flex-start gap-4 fs-1">
-            <img className="icon" src="Icons/Python.svg" alt="" />
-            <img className="icon" src="Icons/React.svg" alt="" />
-            <img className="icon" src="Icons/JavaScript.svg" alt="" />
-            <img className="icon" src="Icons/CSharp.svg" alt="" />
-            <img className="icon" src="Icons/CPlusPlus.svg" alt="" />
-            <img className="icon" src="Icons/Database.svg" alt="" />
+            <a href="https://github.com/jSiderius">
+              <img className="icon" src="Icons/Github.svg" alt="" />
+            </a>
+            <a href="https://www.linkedin.com/in/joshua-siderius-0697a11a3/">
+              <img className="icon" src="Icons/LinkedIn.svg" alt="" />
+            </a>
+            <a href="mailto:jsiderius0@gmail.com">
+              <img className="icon" src="Icons/Gmail.svg" alt="" />
+            </a>
           </div>
         </div>
       </section>
