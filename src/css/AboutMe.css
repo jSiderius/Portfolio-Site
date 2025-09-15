@@ -6,7 +6,7 @@
 }
 
 .about-me-left-panel{
-	flex: 0 0 60%;
+	flex: 0 0 50%;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -15,10 +15,10 @@
 }
 
 .about-me-right-panel{
-	flex: 0 0 40%;
+	flex: 0 0 50%;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 }
 
 .about-me-text{
@@ -28,10 +28,49 @@
 .expertese-container{
 	width: 70%;
 	max-width: 70%;
-	height: 70%;
-	max-height: 70%;
 	background-color: var(--secondary-bg-color);
 	border: 1px solid var(--secondary-border-color);
 	border-radius: 8%;
 	margin: 5% 0 0 0;
+	display: flex;
+	flex-direction: column;
+	padding: 1em;
+}
+
+.skill-bars-container{
+	gap: 0.5em;
+	display: flex;
+	flex-direction: column;
+}
+
+.skill-percentage-and-bar-container{
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+}
+
+.skill-and-percentage-container{
+	display: flex;
+}
+
+.skill-and-percentage-container p{
+	margin: 0;
+}
+
+.percentage-bar-empty{
+	width: 100%;
+	height: 20px;
+	background-color: var(--skill-bar-empty);
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.percentage-bar-full{
+	height: 100%;
+	background-color: #4caf50;
+	/* transition: "width 0.5s ease-in-out", */
+}
+
+.flexbox-push-right{
+	margin-right: auto !important;
 }
