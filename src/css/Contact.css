@@ -1,0 +1,40 @@
+.contact-top-container{
+	padding: 5%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 3em;
+}
+
+.contact-user-input-panel{
+	padding: 5%;
+	width: 80%;
+	min-height: 20vh;
+	background-color: var(--secondary-bg-color);
+	border-radius: 10px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.name-email-conatiner{
+	display: flex;
+	flex-direction: row;
+	gap: 5%;
+}
+
+.contact-field-conatiner{
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.message-field{
+	min-height: 10em;
+}
+
+.contact-socials-container{
+
+}
