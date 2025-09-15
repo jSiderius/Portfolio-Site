@@ -47,10 +47,6 @@ function HeroSection() {
           >
             Contact
           </a>
-        </div>
-        <div>
-          <a>LinkedIn</a>
-          <a>Github</a>
         </div> */}
       </section>
     </>

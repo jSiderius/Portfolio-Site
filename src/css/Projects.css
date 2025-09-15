@@ -1,41 +1,103 @@
 .projects-top-container{
-	height: 80vh;
+	height: 100vh;
 	width: 100%;
-	display: inline-flex;
-	background-color: rebeccapurple;
-
 }
 
 .projects-track-container{
 	height: 100%;
-	display: inline-flex;
-	overflow: visible;
 	white-space: nowrap;
-	background-color: brown;
-	gap: 50%;
+	gap: 0%;
+}
+
+.projects-track-container:has(.projects-modal-box:hover) .projects-track {
+  animation-play-state: paused;
 }
 
 .projects-track{
 	height: 100%;
 	display: inline-flex;
-	animation: scroll 5s linear infinite;
-	/* margin-right: 100%; */
-
+	align-items: center;
+	animation: scroll 20s linear infinite;
 }
 
 .projects-modal-box{
 	height: 70%;
-	min-height: 200px;
-	/* width: 40%; */
-	min-width: 300px;
-	background-color: aqua;
-	/* animation: scroll 10s linear infinite; */
+	width: 400px;
+	background-color: var(--secondary-bg-color);
 	margin: 1rem;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+
+	transition: transform 0.2s ease;
+
+}
+
+.projects-modal-box:hover{
+	transform: scale(1.03);
+}
+
+.projects-modal-box p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.projects-modal-image-box{
+	/* background-color: white; */
+	width: 100%;
+	height: 40%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+}
+
+.tech-stack-container{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.tech-stack-container p:hover {
+  background-color: #eaeaea;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.tech-stack-container p {
+  margin: 0;
+  padding: 3px 8px;
+  border-radius: 5px;
+  background: #fff;
+  border: 1px solid #ddd;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.flexbox-push{
+	margin-top: auto;
+}
+
+.link-button-container {
+	display: flex;
+	justify-content: center;
+	gap: 1.5rem;
+	font-size: 2.5rem;
+}
+
+.link-button{
+	flex: 1;
+	display: flex;
+	gap: 1em;
+	justify-content: center;
+	align-items: center;
 }
 
 @keyframes scroll {
   from {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   to {
     transform: translateX(-100%);

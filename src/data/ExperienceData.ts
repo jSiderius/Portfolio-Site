@@ -1,6 +1,4 @@
-import Experience from "../components/Sections/Experience";
 import type { ExperienceEntry } from "../models/ExperienceEntry";
-import type { ProjectEntry } from "../models/ProjectEntry";
 
 
 export const experiences: ExperienceEntry[] = [

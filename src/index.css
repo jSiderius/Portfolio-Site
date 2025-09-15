@@ -3,3 +3,9 @@
   --secondary-bg-color: #cccccc;
   --secondary-border-color: #999999;
 }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* 🚫 disables horizontal scroll */
+}

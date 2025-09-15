@@ -1,32 +1,15 @@
 import "../../css/Projects.css";
+import { projects } from "../../data/ProjectsData";
+import { FaGithub } from "react-icons/fa";
+import { FaPlay } from "react-icons/fa6";
 
-function Projects() {
+export default function Projects() {
   return (
     <>
       <section className="projects-top-container">
         <div className="projects-track-container">
-          <div className="projects-track">
-            <div className="projects-modal-box">
-              <h1>1</h1>
-            </div>
-            <div className="projects-modal-box">
-              <h1>2</h1>
-            </div>
-            <div className="projects-modal-box">
-              <h1>3</h1>
-            </div>
-          </div>
-          <div className="projects-track">
-            <div className="projects-modal-box">
-              <h1>1</h1>
-            </div>
-            <div className="projects-modal-box">
-              <h1>2</h1>
-            </div>
-            <div className="projects-modal-box">
-              <h1>3</h1>
-            </div>
-          </div>
+          <ProjectsTrack />
+          <ProjectsTrack />
         </div>
         {/* <h1>Featured Projects</h1>;Modal boxes for projects */}
         {/* Include: Demo link, github link, language tags, Tagline, Description, Image */}
@@ -36,4 +19,51 @@ function Projects() {
   );
 }
 
-export default Projects;
+function ProjectsTrack() {
+  return (
+    <div className="projects-track">
+      {projects.map((proj) => (
+        <div className="projects-modal-box">
+          <div
+            className="projects-modal-image-box"
+            style={{ marginBottom: "1em" }}
+          >
+            <img
+              src={proj.imagePath}
+              alt="Project preview"
+              style={{ width: "auto", height: "100%", objectFit: "cover" }}
+            />
+          </div>
+          <h5>{proj.name}</h5>
+          <p>{proj.description}</p>
+          <div className="tech-stack-container">
+            {proj.techStack.map((techString) => (
+              <p>{techString}</p>
+            ))}
+          </div>
+
+          <div className="link-button-container flexbox-push">
+            <a
+              href={proj.demoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-dark link-button"
+            >
+              {<FaPlay />}
+              Demo
+            </a>
+            <a
+              href={proj.githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline-dark link-button"
+            >
+              {<FaGithub />}
+              Code
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}

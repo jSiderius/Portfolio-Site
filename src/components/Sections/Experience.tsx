@@ -1,6 +1,5 @@
 import "../../css/Experience.css";
 import { FaCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
-import { CiLocationOn } from "react-icons/ci";
 import { useState } from "react";
 import type { ExperienceEntry } from "../../models/ExperienceEntry";
 import { experiences } from "../../data/ExperienceData";

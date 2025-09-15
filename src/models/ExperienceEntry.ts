@@ -1,5 +1,11 @@
 import type { ProjectEntry } from './ProjectEntry.ts'
 
+
+interface KeyProjectEntry{
+	name: string;
+	synopsis: string;
+}
+
 export interface ExperienceEntry{
 	id: number;
 	role: string;
@@ -7,5 +13,5 @@ export interface ExperienceEntry{
 	timePeriod: string;
 	workLocationType: string;
 	resumeBullets: string[];
-	keyProjects: ProjectEntry[];
+	keyProjects: KeyProjectEntry[];
 }
