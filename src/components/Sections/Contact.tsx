@@ -4,7 +4,7 @@ function Contact() {
   return (
     <>
       <section className="contact-top-container">
-        <h1 className="experience-header">Lets Connect</h1>
+        <h1 className="experience-header">Let's Connect</h1>
         <UserInputPanel />
         <div className="contact-socials-container">
           <div className="d-flex justify-content-flex-start gap-4 fs-1">
@@ -42,10 +42,9 @@ function UserInputPanel() {
 
       <div className="contact-field-conatiner">
         <p>Message</p>
-        {/* <input type="text" className="message-field"></input> */}
         <textarea
           className="message-field"
-          rows={3} // adjust default height
+          rows={3}
           placeholder="Type your message..."
         ></textarea>
       </div>

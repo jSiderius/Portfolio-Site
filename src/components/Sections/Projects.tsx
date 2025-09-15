@@ -7,6 +7,7 @@ export default function Projects() {
   return (
     <>
       <section className="projects-top-container">
+        <h1 className="projects-header">Projects</h1>
         <div className="projects-track-container">
           <ProjectsTrack />
           <ProjectsTrack />
