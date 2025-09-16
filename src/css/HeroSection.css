@@ -9,7 +9,7 @@
 
 .left-panel{
 	flex-grow: 2;
-	background-color: var(--secondary-bg-color);
+	background-color: var(--tertiary-bg-color);
 	display: flex;
 	justify-content: center;
 	align-items: center;

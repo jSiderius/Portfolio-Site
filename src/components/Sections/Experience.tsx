@@ -17,7 +17,9 @@ export default function Experience() {
             key={exp.id}
             onClick={() => setSelected(exp)}
             className={`experience-button ${
-              selected?.id === exp.id ? "active" : ""
+              selected?.id === exp.id
+                ? "active border-effect border-effect-small"
+                : ""
             }`}
           >
             {exp.role}
@@ -29,7 +31,7 @@ export default function Experience() {
 
   function RightPanel() {
     return (
-      <div className="experience-right-panel">
+      <div className="experience-right-panel border-effect">
         {selected && (
           <>
             <h2>

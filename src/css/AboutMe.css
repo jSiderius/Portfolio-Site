@@ -29,12 +29,18 @@
 	width: 70%;
 	max-width: 70%;
 	background-color: var(--secondary-bg-color);
-	border: 1px solid var(--secondary-border-color);
+	outline: 2px solid var(--secondary-border-color);
 	border-radius: 8%;
 	margin: 5% 0 0 0;
 	display: flex;
 	flex-direction: column;
-	padding: 1em;
+	padding: 2em 2em;
+
+	transition: outline-offset 1.0s ease 1.0s;
+}
+
+.expertese-container:hover{
+	outline-offset: 3px;
 }
 
 .skill-bars-container{
@@ -59,7 +65,7 @@
 
 .percentage-bar-empty{
 	width: 100%;
-	height: 20px;
+	height: 10px;
 	background-color: var(--skill-bar-empty);
 	border-radius: 10px;
 	overflow: hidden;
@@ -67,7 +73,7 @@
 
 .percentage-bar-full{
 	height: 100%;
-	background-color: #4caf50;
+	background-color: var(--highlight-color);
 	/* transition: "width 0.5s ease-in-out", */
 }
 

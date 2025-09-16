@@ -24,7 +24,7 @@ function ProjectsTrack() {
   return (
     <div className="projects-track">
       {projects.map((proj) => (
-        <div className="projects-modal-box">
+        <div className="projects-modal-box border-effect border-effect-snap-close">
           <div
             className="projects-modal-image-box"
             style={{ marginBottom: "1em" }}

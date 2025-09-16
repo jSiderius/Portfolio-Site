@@ -6,6 +6,7 @@
 	align-items: center;
 	gap: 3em;
 	margin-top: -10vh;
+	background-color: var(--primary-bg-color);
 }
 
 .contact-user-input-panel{

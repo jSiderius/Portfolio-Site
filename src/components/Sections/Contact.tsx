@@ -26,7 +26,7 @@ function Contact() {
 
 function UserInputPanel() {
   return (
-    <div className="contact-user-input-panel">
+    <div className="contact-user-input-panel border-effect">
       <div className="name-email-conatiner">
         <div className="contact-field-conatiner">
           <p>Name</p>

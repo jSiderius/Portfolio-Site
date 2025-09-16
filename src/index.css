@@ -1,14 +1,45 @@
 :root {
-  --primary-bg-color: #ffffff;
-  --secondary-bg-color: #cccccc;
+  /* --primary-bg-color: #BBE1FA; */
+  --primary-bg-color: #C6DCE4;
+  --primary-text-color: #000000;
+  --primary-soft-text-color: grey;
+  
+  --secondary-bg-color: white; 
   --secondary-border-color: #999999;
+  --secondary-text-color: #000000;
+  --secondary-soft-text-color: grey;
+  --secondary-bg-subcontainer-color: #C6DCE4;
+  
+  --tertiary-bg-color: #112D4E;
 
   --skill-bar-empty: #ddd;
-  --skill-bar-full: ;
+  --skill-bar-full: #4caf50;
+
+  --highlight-color: #124170;
+  --highlight-text-color: white;
 }
 
 html, body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* 🚫 disables horizontal scroll */
+  overflow-x: hidden;
+}
+
+.border-effect{
+	outline: 2px solid var(--secondary-border-color) !important;
+  outline-offset: 0px;
+	transition: outline-offset 0.1s linear 0.3s !important;
+  display: inline-block;
+}
+
+.border-effect:hover{
+  outline-offset: 4px;
+}
+
+.border-effect-small:hover{
+  outline-offset: 2px;
+}
+
+.border-effect-snap-close:not(:hover) {
+  transition: none !important;
 }

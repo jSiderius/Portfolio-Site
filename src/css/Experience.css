@@ -1,10 +1,10 @@
 .experience-top-container{
 	min-height: 100vh;
-	background-color: var(--secondary-bg-color);
+	background-color: var(--primary-bg-color);
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	padding: 10%;
+	padding: 5% 10% 10% 10%;
 }
 
 .experience-header{
@@ -30,42 +30,49 @@
 }
 
 .experience-right-panel{
-	background-color: var(--primary-bg-color);
+	background-color: var(--secondary-bg-color);
+	
 	padding: 20px;
 	border-radius: 20px;
-	border: 1px solid grey;
 	display: flex;
 	flex-direction: column;
 	flex: 3 0 0;
 }
 
+/* outline: 2px solid transparent; */
 .experience-button{
-	border: 1px solid black;
+	outline: 1px solid var(--secondary-soft-text-color);
+	outline-offset: 0px;
 	border-radius: 10px;
+	border-width: 0px;
+	
 	padding: 15px;
 	margin: 0 5px;
-	color: grey;
-	border-color: grey;
-	background-color: var(--primary-bg-color);
 
+	color: var(--secondary-soft-text-color);
+	background-color: var(--secondary-bg-color);
+	
 	transition:
 		transform 0.35s linear 0.5s,
-		outline-offset 0s linear 0.3s;
-		
-}
-
-.experience-button.active,
-.experience-button.active:focus{
-	background-color: black;
-	outline: 0.15em solid grey;
-  	outline-offset: 2px;
-	color: white !important;	
+		outline-offset 0.0s linear 1.s;
 }
 
 .experience-button:hover{
 	transform: scale(1.03);
-	color: black;
-	border-color: black;
+	color: var(--secondary-text-color);
+	outline: 1px solid var(--secondary-text-color);
+}
+
+.experience-button.active,
+.experience-button.active:focus{
+	background-color: var(--tertiary-bg-color);
+	color: var(--highlight-text-color) !important;
+  	/* outline-offset: 2px; */
+}
+
+.experience-button.active:hover{
+	/* outline: 2px solid var(--secondary-border-color); */
+  	/* outline-offset: 2px; */
 }
 
 .experience-time-location-container{
@@ -87,7 +94,7 @@
 }
 
 .key-projects-item-container{
-	background-color: var(--secondary-bg-color);
+	background-color: var(--secondary-bg-subcontainer-color);
 	border-radius: 10px;
 	padding: 1em;
 }
