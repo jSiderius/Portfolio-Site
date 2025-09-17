@@ -1,6 +1,6 @@
 import "../../css/Experience.css";
 import { FaCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import type { ExperienceEntry } from "../../models/ExperienceEntry";
 import { experiences, academicExperiences } from "../../data/ExperienceData";
 import { motion, AnimatePresence } from "framer-motion";
@@ -12,24 +12,31 @@ export default function Experience() {
 
   const [dataset, setDataset] = useState<ExperienceEntry[]>(experiences);
 
+  const datasetChangeRef = useRef(false);
+
+  function changeDataset(newDataset: ExperienceEntry[]) {
+    datasetChangeRef.current = true;
+    setDataset(newDataset);
+    setSelected(newDataset[0]);
+  }
+
   function LeftPanel() {
     return (
       <div className="experience-left-panel">
         <AnimatePresence>
-          {dataset.map((exp) => (
+          {dataset.map((exp, i) => (
             <motion.button
               key={exp.id}
               onClick={() => {
                 if (exp.role === "Academic Experience") {
-                  setDataset(academicExperiences);
-                  setSelected(academicExperiences[0]);
+                  changeDataset(academicExperiences);
                   return;
                 }
                 if (exp.role === "Professional Experience") {
-                  setDataset(experiences);
-                  setSelected(experiences[0]);
+                  changeDataset(experiences);
                   return;
                 }
+                datasetChangeRef.current = false;
                 setSelected(exp);
               }}
               className={`experience-button card ${
@@ -37,10 +44,15 @@ export default function Experience() {
                   ? "active border-effect border-effect-small"
                   : ""
               }`}
-              initial={{ y: -50, opacity: 0 }}
+              initial={
+                datasetChangeRef.current ? { y: -50, opacity: 0 } : false
+              }
               animate={{ y: 0, opacity: 1 }}
-              // exit={{ y: 30, opacity: 0 }}
-              transition={{ duration: 1.0, ease: "linear" }}
+              transition={{
+                duration: (0.8 * (dataset.length - i)) / dataset.length,
+                ease: "easeOut",
+              }}
+              layout
             >
               {exp.role}
             </motion.button>
@@ -72,8 +84,19 @@ export default function Experience() {
             </p>
 
             <ul className="custom-list">
-              {selected.resumeBullets.map((bullet) => (
-                <li>{bullet}</li>
+              {selected.resumeBullets.map((bullet, i) => (
+                <motion.li
+                  initial={{ y: -50, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{
+                    duration:
+                      (0.8 * (selected.resumeBullets.length - i)) /
+                      selected.resumeBullets.length,
+                    ease: "easeOut",
+                  }}
+                >
+                  {bullet}
+                </motion.li>
               ))}
             </ul>
 
