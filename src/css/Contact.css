@@ -6,14 +6,12 @@
 	align-items: center;
 	gap: 3em;
 	margin-top: -10vh;
-	background-color: var(--primary-bg-color);
 }
 
 .contact-user-input-panel{
 	padding: 5%;
 	width: 80%;
 	min-height: 20vh;
-	background-color: var(--secondary-bg-color);
 	border-radius: 10px;
 
 	display: flex;
@@ -35,8 +33,4 @@
 
 .message-field{
 	min-height: 10em;
-}
-
-.contact-socials-container{
-
 }

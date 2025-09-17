@@ -24,7 +24,7 @@ function ProjectsTrack() {
   return (
     <div className="projects-track">
       {projects.map((proj) => (
-        <div className="projects-modal-box border-effect border-effect-snap-close">
+        <div className="projects-modal-box border-effect border-effect-snap-close card">
           <div
             className="projects-modal-image-box"
             style={{ marginBottom: "1em" }}
@@ -39,7 +39,7 @@ function ProjectsTrack() {
           <p>{proj.description}</p>
           <div className="tech-stack-container">
             {proj.techStack.map((techString) => (
-              <p>{techString}</p>
+              <p className="sub-card-textbox">{techString}</p>
             ))}
           </div>
 

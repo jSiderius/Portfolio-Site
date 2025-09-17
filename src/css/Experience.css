@@ -1,6 +1,5 @@
 .experience-top-container{
 	min-height: 100vh;
-	background-color: var(--primary-bg-color);
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -25,13 +24,11 @@
 	flex: 1 0 0;
 	display: flex;
 	flex-direction: column;
-	gap: 0.4em;
+	gap: 1.5em;
 	overflow: visible;
 }
 
 .experience-right-panel{
-	background-color: var(--secondary-bg-color);
-	
 	padding: 20px;
 	border-radius: 20px;
 	display: flex;
@@ -39,7 +36,6 @@
 	flex: 3 0 0;
 }
 
-/* outline: 2px solid transparent; */
 .experience-button{
 	outline: 1px solid var(--secondary-soft-text-color);
 	outline-offset: 0px;
@@ -50,7 +46,6 @@
 	margin: 0 5px;
 
 	color: var(--secondary-soft-text-color);
-	background-color: var(--secondary-bg-color);
 	
 	transition:
 		transform 0.35s linear 0.5s,
@@ -59,20 +54,14 @@
 
 .experience-button:hover{
 	transform: scale(1.03);
-	color: var(--secondary-text-color);
-	outline: 1px solid var(--secondary-text-color);
+	color: var(--text-color);
+	outline: 1px solid #e6edf3;
 }
 
 .experience-button.active,
 .experience-button.active:focus{
-	background-color: var(--tertiary-bg-color);
+	background-color: var(--highlight-color);
 	color: var(--highlight-text-color) !important;
-  	/* outline-offset: 2px; */
-}
-
-.experience-button.active:hover{
-	/* outline: 2px solid var(--secondary-border-color); */
-  	/* outline-offset: 2px; */
 }
 
 .experience-time-location-container{
@@ -93,16 +82,11 @@
 	gap: 1em;
 }
 
-.key-projects-item-container{
-	background-color: var(--secondary-bg-subcontainer-color);
-	border-radius: 10px;
-	padding: 1em;
-}
-
 ul.custom-list li {
 	list-style: none;
 	position: relative;
 	padding-left: 25px;
+	/* background-color: var(--highlight-color); */
 }
 
 ul.custom-list li::before {
@@ -114,4 +98,5 @@ ul.custom-list li::before {
 	height: 16px;
 	background: url('../assets/bullet-point.png') no-repeat center;
 	background-size: contain;
+	color: var(--highlight-color);
 }

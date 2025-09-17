@@ -14,10 +14,11 @@ function HeroSection() {
             <h2>Joshua Siderius</h2>
             <h5>Software Developer</h5>
             <p className="dev-objectives-paragraph">
-              This is a paragraph about myself and my objectives as a developer
-              This is a paragraph about myself and my objectives as a developer
-              This is a paragraph about myself and my objectives as a developer
-              This is a paragraph about myself and my objectives as a developer
+              I could give a tag line like "Full-stack developer passionate
+              about building scalable web apps and intelligent systems.", but
+              really I am a just a developer who just loves to code! What
+              matters to me is building projects with good design, learning from
+              every opportunity, and putting care and dedication into my work.
             </p>
             <div className="d-flex justify-content-flex-start gap-4 fs-1">
               <img className="icon" src="Icons/Python.svg" alt="" />
@@ -29,25 +30,6 @@ function HeroSection() {
             </div>
           </div>
         </div>
-
-        {/* <div className="d-flex justify-content-center gap-4 fs-1">
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-dark"
-          >
-            Download CV
-          </a>
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-outline-dark"
-          >
-            Contact
-          </a>
-        </div> */}
       </section>
     </>
   );

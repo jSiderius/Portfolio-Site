@@ -41,11 +41,16 @@ function LeftPanel() {
     </div>
   );
 }
+//  I
+// have work experience with web development, AI & automation, data
+// models, game development and more. I bring passion, skill, and
+// dedication to every opportunity and always work to improve myself
+// in the field.
 
 function RightPanel() {
   return (
     <div className="about-me-right-panel">
-      <div className="expertese-container">
+      <div className="expertese-container card border-effect">
         <h2 style={{ textAlign: "center" }}>Core Expertise</h2>
 
         <div className="skill-bars-container">

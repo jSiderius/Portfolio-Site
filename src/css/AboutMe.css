@@ -2,7 +2,6 @@
 	display: flex;
 	height: 65vh;
 	width: 100%;
-	background-color: var(--primary-bg-color);
 }
 
 .about-me-left-panel{
@@ -28,15 +27,13 @@
 .expertese-container{
 	width: 70%;
 	max-width: 70%;
-	background-color: var(--secondary-bg-color);
-	outline: 2px solid var(--secondary-border-color);
-	border-radius: 8%;
 	margin: 5% 0 0 0;
 	display: flex;
 	flex-direction: column;
 	padding: 2em 2em;
 
-	transition: outline-offset 1.0s ease 1.0s;
+
+	border-radius: 12px;
 }
 
 .expertese-container:hover{

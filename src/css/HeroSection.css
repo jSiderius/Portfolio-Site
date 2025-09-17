@@ -9,7 +9,7 @@
 
 .left-panel{
 	flex-grow: 2;
-	background-color: var(--tertiary-bg-color);
+	/* background-color: var(--tertiary-bg-color); */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -17,7 +17,7 @@
 
 .right-panel{
 	flex-grow: 3;
-	background-color: var(--primary-bg-color);
+	/* background-color: var(--primary-bg-color); */
 	display: flex;
 	align-items: center;
 	justify-content: center;
