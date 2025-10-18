@@ -97,7 +97,7 @@ export const experiences: ExperienceEntry[] = [
 		timePeriod: "",
 		workLocationType: "",
 		resumeBullets: [],
-			keyProjects: [],
+		keyProjects: [],
 		
 	}
 ]
@@ -108,27 +108,32 @@ export const academicExperiences: ExperienceEntry[] = [
 		role: "Bachelor of Computer Science",
 		company: "Carleton University",
 		timePeriod: "2019-2025",
-		workLocationType: "",
-		keyProjects: [],
-		resumeBullets: ["This is bullet point number 1", "This is bullet point number 2 This is bullet point number 2 This is bullet point number 2 This is bullet point number 2 This is bullet point number 2 ", "Bullet 3"],
+		workLocationType: "On Site",
+		keyProjects: [{name: "Capstone Project - Procedural City Generator", synopsis: "A project which uses a series of procedural generation algorithms to create a 2 dimensional city layout."}],
+		resumeBullets: ["10.00/12.00 CGPA for major requirements",
+			"Completed courses covering software engineering, algorithms, databases, web development, artificial intelligence, and data structures.",
+			"Gained applied experience with Python, Java, C++, SQL, and more."],
 	},
+
 	{
 		id: 2,
 		role: "Statistics Minor",
 		company: "Carleton University",
 		timePeriod: "2019-2025",
-		workLocationType: "",
+		workLocationType: "On Site",
 		keyProjects: [],
-		resumeBullets: ["This is bullet point number 1", "This is bullet point number 2 This is bullet point number 2 This is bullet point number 2 This is bullet point number 2 This is bullet point number 2 ", "Bullet 3"],
+		resumeBullets: ["10.14/12.00 CGPA", 
+		"Completed courses covering advanced statistical models and their applications in depth."],
 	},
 	{
 		id: 3,
 		role: "Math Minor",
 		company: "Carleton University",
 		timePeriod: "2019-2025",
-		workLocationType: "",
+		workLocationType: "On Site",
 		keyProjects: [],
-		resumeBullets: ["This is bullet point number 1", "This is bullet point number 2 This is bullet point number 2 This is bullet point number 2 This is bullet point number 2 This is bullet point number 2 ", "Bullet 3"],
+		resumeBullets: ["9.71/12.00 CGPA", 
+			"Covered foundational math topics including: Calculus 1-3, Linear Algebra 1-2, Discrete Mathematics, and Computational Modelling."],
 	},
 	{
 		id: 4,
