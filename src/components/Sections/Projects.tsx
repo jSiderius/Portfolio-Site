@@ -48,7 +48,7 @@ function ProjectsTrack() {
               href={proj.demoLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-dark link-button"
+              className="btn btn-dark link-button button-primary border-effect border-effect-small"
             >
               {<FaPlay />}
               Demo
@@ -57,7 +57,7 @@ function ProjectsTrack() {
               href={proj.githubLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-outline-dark link-button"
+              className="btn btn-outline-dark link-button button-secondary border-effect border-effect-small"
             >
               {<FaGithub />}
               Code

@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import type { ExperienceEntry } from "../../models/ExperienceEntry";
 import { experiences, academicExperiences } from "../../data/ExperienceData";
 import { motion, AnimatePresence } from "framer-motion";
+import { select } from "framer-motion/client";
 
 export default function Experience() {
   const [selected, setSelected] = useState<ExperienceEntry | null>(
@@ -89,8 +90,9 @@ export default function Experience() {
                   initial={{ y: -50, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{
+                    delay: 0.1,
                     duration:
-                      (0.8 * (selected.resumeBullets.length - i)) /
+                      (1.2 * (selected.resumeBullets.length - i)) /
                       selected.resumeBullets.length,
                     ease: "easeOut",
                   }}
@@ -100,7 +102,13 @@ export default function Experience() {
               ))}
             </ul>
 
-            <h4 style={{ marginTop: ".5em" }}>Key Projects:</h4>
+            <h4 style={{ marginTop: ".5em" }}>
+              {selected.keyProjects.length < 1
+                ? ""
+                : selected.keyProjects.length == 1
+                ? "Key Project:"
+                : "Key Projects"}
+            </h4>
             <div className="key-projects-group-container">
               {selected.keyProjects.map((proj) => (
                 <div className="sub-card-textbox">
