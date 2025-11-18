@@ -46,7 +46,7 @@ function ProjectsTrack() {
           <div className="link-button-container flexbox-push">
             <a
               href={proj.demoLink}
-              target="_blank"
+              target={proj.demoLink == "#" ? "_self" : "_blank"}
               rel="noopener noreferrer"
               className="btn btn-dark link-button button-primary border-effect border-effect-small"
             >

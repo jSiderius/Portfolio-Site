@@ -11,7 +11,7 @@
 	flex-grow: 2;
 	/* background-color: var(--tertiary-bg-color); */
 	display: flex;
-	justify-content: center;
+	justify-content: right;
 	align-items: center;
 }
 
@@ -28,9 +28,23 @@
 	margin: 0, 10%, 0, 10%;
 }
 
+.headshot-container {
+  width: 300px;
+  height: 300px;
+  border-radius: 10%;
+  overflow: hidden;
+  /* position: relative; */
+}
+
 .headshot{
-	width: 200px;
-	border-radius: 80%;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 0% 10%;
+}
+
+.headshot-container .headshot {
+  transform: scale(1.8);     /* zooms image inside container */
 }
 
 .icon{

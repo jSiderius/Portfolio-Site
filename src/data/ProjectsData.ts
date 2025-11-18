@@ -2,48 +2,48 @@ import type { ProjectEntry } from "../models/ProjectEntry"
 
 export const projects: ProjectEntry[] = [
 	{
-		date: "August 2025",
-		name: "Project 1",
-		description: "Description of the project",
+		date: "November 2025",
+		name: "Portfolio Website",
+		description: "Frontend web project to show off my experience as a developer!",
+		demoLink: "#",
+		githubLink: "https://github.com/jSiderius/Portfolio-Site",
+		techStack: ["React", "Typescript", "Javascript", "HTML", "CSS"],
+		imagePath: ""
+	},
+	{
+		date: "April 2025",
+		name: "Map Gen",
+		description: "2 dimensional procedural city layout and tile generator.",
+		demoLink: "",
+		githubLink: "https://github.com/jSiderius/MapGen",
+		techStack: ["Godot", "GDScript", "DS&A"],
+		imagePath: ""
+	},
+	{
+		date: "February 2025",
+		name: "Bubble Escape",
+		description: "Puzzle game created in two days for Global Game Jam 2025.",
+		demoLink: "https://jsiderius.itch.io/bubble-escape",
+		githubLink: "https://github.com/jSiderius/GlobalGameJam2025",
+		techStack: ["Godot", "GDScript"],
+		imagePath: "/Images/bubble-escape.jpg"
+	},
+	{
+		date: "December 2024",
+		name: "AI Search Engine",
+		description: "Search engine that embeds and looks up row data using AI embeddings. Active on Jeopardy data.",
 		demoLink: "https://github.com",
-		githubLink: "https://github.com",
-		techStack: ["react", "typescript", "node"],
+		githubLink: "https://github.com/jSiderius/AI_Search_Engine",
+		techStack: [],
 		imagePath: "/Images/game.jpg"
 	},
 	{
-		date: "August 2025",
-		name: "Project 2",
-		description: "Description of the project Description of the project Description of the project Description of the project Description of the project Description of the project",
+		date: "September 2022",
+		name: "Secret Santa Manager",
+		description: "Program to determine secret santa gift givers and receivers; Acts as an email client and notifies all participants",
 		demoLink: "https://github.com",
-		githubLink: "https://github.com",
-		techStack: ["react", "typescript", "node"],
-		imagePath: "/Images/game.jpg"
-	},
-	{
-		date: "August 2025",
-		name: "Project 3",
-		description: "Description of the project",
-		demoLink: "https://github.com",
-		githubLink: "https://github.com",
-		techStack: ["react", "typescript", "node", "react", "typescript", "node", "react", "typescript", "node"],
-		imagePath: "/Images/game.jpg"
-	},
-	{
-		date: "August 2025",
-		name: "Project 4",
-		description: "Description of the project",
-		demoLink: "https://github.com",
-		githubLink: "https://github.com",
-		techStack: ["react", "typescript", "node"],
-		imagePath: "/Images/game.jpg"
-	},
-	{
-		date: "August 2025",
-		name: "Project 5",
-		description: "Description of the project",
-		demoLink: "https://github.com",
-		githubLink: "https://github.com",
-		techStack: ["react", "typescript", "node"],
+		githubLink: "https://github.com/jSiderius/SecretSanta",
+		techStack: [],
 		imagePath: "/Images/game.jpg"
 	}
 ]

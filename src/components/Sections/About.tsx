@@ -23,29 +23,28 @@ function LeftPanel() {
       <div className="about-me-text">
         <h2 className="experience-header">About Me</h2>
         <p>
-          This it the first paragraph in the about me section This it the first
-          paragraph in the about me section This it the first paragraph in the
-          about me section This it the first paragraph in the about me section
+          I am a developer who just loves to code! What matters to me is
+          building projects with good design, learning from every opportunity,
+          and putting care and dedication into my work.
         </p>
         <p>
-          This it the second paragraph in the about me section This it the first
-          paragraph in the about me section This it the first paragraph in the
-          about me section This it the first paragraph in the about me section
+          In my free time I spend time with friends and family, walk my dog
+          Palmer, cook, code, play chess, and stay active with basketball. I
+          value strong community and love contributing to a positive team.
         </p>
         <p>
-          This it the third paragraph in the about me section This it the first
-          paragraph in the about me section This it the first paragraph in the
-          about me section This it the first paragraph in the about me section
+          I am currently based in Ottawa, ON, and I'm open to opportunities
+          locally or in the GTA (with relocation). Feel free to reach out to me{" "}
+          <a href="#contact-form" className="contact-link">
+            here
+          </a>
+          ; I would love to discuss how I can contribute to your team or
+          project.
         </p>
       </div>
     </div>
   );
 }
-//  I
-// have work experience with web development, AI & automation, data
-// models, game development and more. I bring passion, skill, and
-// dedication to every opportunity and always work to improve myself
-// in the field.
 
 function RightPanel() {
   return (
