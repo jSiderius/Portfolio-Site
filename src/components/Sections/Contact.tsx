@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../../css/Contact.css";
+import "../../css/Input.css";
 
 function Contact() {
   return (
@@ -48,32 +49,36 @@ function UserInputForm() {
       className="contact-user-input-panel border-effect card"
     >
       <div className="name-email-conatiner">
-        <div className="contact-field-conatiner">
-          <p>Name</p>
-          <input className="text-field" type="text" name="name" required />
-        </div>
+        <label className="custom-field two">
+          <input type="text" name="name" placeholder="" required />
+          <span className="placeholder">Name</span>
+          {/* <span className="border"></span> */}
+        </label>
 
-        <div className="contact-field-conatiner">
-          <p>Email</p>
-          <input className="text-field" type="text" name="email" required />
-        </div>
+        <label className="custom-field two">
+          <input type="text" name="email" placeholder="" required />
+          <span className="placeholder">Email</span>
+          {/* <span className="border"></span> */}
+        </label>
       </div>
 
-      <div className="contact-field-conatiner">
-        <p>Subject</p>
-        <input className="text-field" type="text" name="subject" />
-      </div>
+      <label className="custom-field two">
+        <input type="text" name="subject" placeholder="" />
+        <span className="placeholder">Subject</span>
+        {/* <span className="border"></span> */}
+      </label>
 
-      <div className="contact-field-conatiner">
-        <p>Message</p>
+      <label className="custom-field one">
         <textarea
-          className="message-field text-field"
-          rows={3}
-          placeholder="Type your message..."
+          // className=""
+          placeholder=""
+          rows={4}
           name="message"
           required
         />
-      </div>
+        <span className="placeholder">Message</span>
+        {/* <span className="border"></span> */}
+      </label>
 
       <button className="submission-button" type="submit">
         Submit
