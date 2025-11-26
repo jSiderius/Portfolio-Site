@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../../css/Contact.css";
 import "../../css/Input.css";
+import "../../css/CustomBorderEffect.css";
 
 function Contact() {
   return (
@@ -44,9 +45,11 @@ function UserInputForm() {
   };
 
   return (
+    // <div className="custom-border-effect" style={{ width: "80%" }}>
     <form
       onSubmit={onSubmit}
-      className="contact-user-input-panel border-effect card"
+      className="custom-border-effect contact-user-input-panel"
+      style={{ width: "80%" }}
     >
       <div className="name-email-conatiner">
         <label className="custom-field two">
@@ -84,8 +87,10 @@ function UserInputForm() {
         Submit
       </button>
       <p>{result}</p>
+      <span className="border-1"></span>
+      <span className="border-2"></span>
     </form>
+    // </div>
   );
 }
-
 export default Contact;

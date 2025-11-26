@@ -48,18 +48,19 @@ html, body {
 }
 
 .border-effect{
-	outline: 2px solid var(--secondary-border-color) !important;
+  outline: none;
   outline-offset: 0px;
 	transition: outline-offset 0.1s linear 0.3s !important;
   display: inline-block;
 }
 
 .border-effect:hover{
-  outline-offset: 4px;
+  /* outline-offset: 4px; */
+  outline: 2px solid var(--highlight-color) !important;
 }
 
 .border-effect-small:hover{
-  outline-offset: 2px;
+  /* outline-offset: 2px; */
 }
 
 .border-effect-snap-close:not(:hover) {
@@ -78,7 +79,7 @@ html, body {
 }
 
 .sub-card-textbox{
-  background: rgba(255, 255, 255, 0.05); /* faintly lighter than card */
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 8px;
   padding: 1rem;

@@ -24,7 +24,9 @@ function ProjectsTrack() {
   return (
     <div className="projects-track">
       {projects.map((proj) => (
-        <div className="projects-modal-box border-effect border-effect-snap-close card">
+        <div className="projects-modal-box custom-border-effect card">
+          <span className="border-1"></span>
+          <span className="border-2"></span>
           <div
             className="projects-modal-image-box"
             style={{ marginBottom: "1em" }}
@@ -48,8 +50,10 @@ function ProjectsTrack() {
               href={proj.demoLink}
               target={proj.demoLink == "#" ? "_self" : "_blank"}
               rel="noopener noreferrer"
-              className="btn btn-dark link-button button-primary border-effect border-effect-small"
+              className="btn btn-dark link-button button-primary custom-border-effect"
             >
+              <span className="border-1"></span>
+              <span className="border-2"></span>
               {<FaPlay />}
               Demo
             </a>
@@ -57,8 +61,10 @@ function ProjectsTrack() {
               href={proj.githubLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-outline-dark link-button button-secondary border-effect border-effect-small"
+              className="btn btn-outline-dark link-button button-secondary custom-border-effect"
             >
+              <span className="border-1"></span>
+              <span className="border-2"></span>
               {<FaGithub />}
               Code
             </a>
