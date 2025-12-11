@@ -13,31 +13,44 @@
 .custom-border-effect .border-2 {
   position: absolute;
   inset: 0;
+  border: 0px solid var(--draw-color);
   border-radius: inherit;
-  border-style: solid;
-  border-width: 0px;
-  border-color: var(--draw-color);
-  /* border: 0px solid var(--draw-color); */
-  transition: clip-path 0.6s ease;
   pointer-events: none;
-  /* z-index: -5; */
+  /* transition: clip-path 0.6s ease; */
 }
 
 .custom-border-effect .border-1{
-	/* border-width: var(--draw-line-width) var(--draw-line-width) 0 0; */
 	clip-path: inset(100% 100% 0% 0%);
-	z-index: 100;
-	/* clip-path: none; */
-	/* background-color: blue; */
 }
 
 .custom-border-effect .border-2{
-	/* border-width: 0 0 var(--draw-line-width) var(--draw-line-width); */
 	clip-path: inset(0 0 100% 100%);
-	/* background-color: red; */
 }
 
 .custom-border-effect:hover .border-1,
 .custom-border-effect:hover .border-2 {
+  clip-path: inset(0 0 0 0);
+}
+
+.custom-border-effect .clip-1,
+.custom-border-effect .clip-2 {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  overflow: hidden;
+  transition: clip-path 0.6s ease;
+  pointer-events: none;
+}
+
+.custom-border-effect .clip-1 {
+  clip-path: inset(100% 100% 0% 0%);
+}
+
+.custom-border-effect .clip-2 {
+  clip-path: inset(0 0 100% 100%);
+}
+
+.custom-border-effect:hover .clip-1,
+.custom-border-effect:hover .clip-2 {
   clip-path: inset(0 0 0 0);
 }

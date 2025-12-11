@@ -60,6 +60,11 @@
 	background-repeat: no-repeat;
 	display: flex;
 	justify-content: center;
+	/* background-color: aliceblue; */
+}
+
+.projects-modal-image{
+	border-radius: 10px;
 }
 
 .tech-stack-container{

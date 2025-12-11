@@ -32,6 +32,7 @@ function ProjectsTrack() {
             style={{ marginBottom: "1em" }}
           >
             <img
+              className="projects-modal-image"
               src={proj.imagePath}
               alt="Project preview"
               style={{ width: "auto", height: "100%", objectFit: "cover" }}

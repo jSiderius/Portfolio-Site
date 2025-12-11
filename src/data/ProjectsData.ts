@@ -8,7 +8,7 @@ export const projects: ProjectEntry[] = [
 		demoLink: "#",
 		githubLink: "https://github.com/jSiderius/Portfolio-Site",
 		techStack: ["React", "Typescript", "Javascript", "HTML", "CSS"],
-		imagePath: ""
+		imagePath: "/Images/JS.png"
 	},
 	{
 		date: "April 2025",
@@ -17,7 +17,7 @@ export const projects: ProjectEntry[] = [
 		demoLink: "",
 		githubLink: "https://github.com/jSiderius/MapGen",
 		techStack: ["Godot", "GDScript", "DS&A"],
-		imagePath: ""
+		imagePath: "/Images/map-gen.png"
 	},
 	{
 		date: "February 2025",
@@ -34,8 +34,8 @@ export const projects: ProjectEntry[] = [
 		description: "Search engine that embeds and looks up row data using AI embeddings. Active on Jeopardy data.",
 		demoLink: "https://github.com",
 		githubLink: "https://github.com/jSiderius/AI_Search_Engine",
-		techStack: [],
-		imagePath: "/Images/game.jpg"
+		techStack: ["Python", "Javascript", "HTML", "CSS"],
+		imagePath: "/Images/jeopardy-search.jpg"
 	},
 	{
 		date: "September 2022",
@@ -43,7 +43,7 @@ export const projects: ProjectEntry[] = [
 		description: "Program to determine secret santa gift givers and receivers; Acts as an email client and notifies all participants",
 		demoLink: "https://github.com",
 		githubLink: "https://github.com/jSiderius/SecretSanta",
-		techStack: [],
-		imagePath: "/Images/game.jpg"
+		techStack: ["Python", "SMTP"],
+		imagePath: "/Images/santa.png"
 	}
 ]

@@ -45,7 +45,6 @@ function UserInputForm() {
   };
 
   return (
-    // <div className="custom-border-effect" style={{ width: "80%" }}>
     <form
       onSubmit={onSubmit}
       className="custom-border-effect contact-user-input-panel"
@@ -83,14 +82,34 @@ function UserInputForm() {
         {/* <span className="border"></span> */}
       </label>
 
-      <button className="submission-button" type="submit">
-        Submit
-      </button>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <button
+          className="custom-border-effect submission-button"
+          type="submit"
+        >
+          Submit
+          <div className="clip-1">
+            <span
+              className="border-1"
+              style={{ borderWidth: "8px !important" }}
+            ></span>
+          </div>
+          <div className="clip-2">
+            <span
+              className="border-2"
+              style={{ borderWidth: "8px !important" }}
+            ></span>
+          </div>
+        </button>
+      </div>
       <p>{result}</p>
-      <span className="border-1"></span>
-      <span className="border-2"></span>
     </form>
-    // </div>
   );
 }
 export default Contact;
