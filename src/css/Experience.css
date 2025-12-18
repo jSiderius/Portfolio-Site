@@ -4,6 +4,7 @@
 	flex-direction: column;
 	align-items: flex-start;
 	padding: 5% 10% 10% 10%;
+
 }
 
 .experience-header{
@@ -16,12 +17,15 @@
 }
 
 .experience-panel-container{
+	width: 100%;
 	display: flex;	
 	gap: 60px;
 }
 
 .experience-left-panel{
-	flex: 1 0 0;
+	flex: 1.5 1 0;
+	min-width: 0;
+
 	display: flex;
 	flex-direction: column;
 	gap: 1.5em;
@@ -33,7 +37,11 @@
 	border-radius: 20px;
 	display: flex;
 	flex-direction: column;
-	flex: 3 0 0;
+	
+	flex: 3 1 0;
+	min-width: 0;
+
+	transition: height 3s ease;
 }
 
 .experience-button{
@@ -46,6 +54,7 @@
 	margin: 0 5px;
 
 	color: var(--secondary-soft-text-color);
+	white-space: no-wrap;
 	
 	transition:
 		transform 0.35s linear 0.5s,

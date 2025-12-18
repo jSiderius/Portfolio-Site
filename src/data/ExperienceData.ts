@@ -136,6 +136,15 @@ export const academicExperiences: ExperienceEntry[] = [
 			"Covered foundational math topics including: Calculus 1-3, Linear Algebra 1-2, Discrete Mathematics, and Computational Modelling."],
 	},
 	{
+		id: 5,
+		role: "test",
+		company: "test",
+		timePeriod: "",
+		workLocationType: "",
+		keyProjects: [],
+		resumeBullets: [""],
+	},
+	{
 		id: 4,
 		role: "Professional Experience",
 		company: "",
