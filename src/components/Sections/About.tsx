@@ -50,8 +50,7 @@ function RightPanel() {
   return (
     <div className="about-me-right-panel">
       <div className="expertese-container card custom-border-effect">
-        <span className="border-1"></span>
-        <span className="border-2"></span>
+        <span className="border"></span>
         <h2 style={{ textAlign: "center" }}>Core Expertise</h2>
 
         <div className="skill-bars-container">

@@ -40,7 +40,7 @@ export const projects: ProjectEntry[] = [
 	{
 		date: "September 2022",
 		name: "Secret Santa Manager",
-		description: "Program to determine secret santa gift givers and receivers; Acts as an email client and notifies all participants",
+		description: "Program to determine secret santa gift givers and receivers; Acts as an email client and notifies all participants.",
 		demoLink: "https://github.com",
 		githubLink: "https://github.com/jSiderius/SecretSanta",
 		techStack: ["Python", "SMTP"],

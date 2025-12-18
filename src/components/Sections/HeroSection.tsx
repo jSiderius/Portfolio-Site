@@ -6,7 +6,8 @@ function HeroSection() {
       {/* PNG of face */}
       <section className="vh-100 top-container">
         <div className="left-panel">
-          <div className="headshot-container">
+          <div className="headshot-container custom-border-effect">
+            <span className="border thick"></span>
             {/* <img className="headshot" src="/Images/Photos/on-horse.jpg"></img> */}
             {/* <img className="headshot" src="/Images/Photos/boat.jpg"></img> */}
             <img className="headshot" src="/Images/Photos/grad.jpg"></img>

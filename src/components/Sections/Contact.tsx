@@ -46,10 +46,12 @@ function UserInputForm() {
 
   return (
     <form
+      id="contact-form"
       onSubmit={onSubmit}
       className="custom-border-effect contact-user-input-panel"
       style={{ width: "80%" }}
     >
+      <span className="border thick"></span>
       <div className="name-email-conatiner">
         <label className="custom-field two">
           <input type="text" name="name" placeholder="" required />
@@ -93,19 +95,7 @@ function UserInputForm() {
           className="custom-border-effect submission-button"
           type="submit"
         >
-          Submit
-          <div className="clip-1">
-            <span
-              className="border-1"
-              style={{ borderWidth: "8px !important" }}
-            ></span>
-          </div>
-          <div className="clip-2">
-            <span
-              className="border-2"
-              style={{ borderWidth: "8px !important" }}
-            ></span>
-          </div>
+          Submit{" "}
         </button>
       </div>
       <p>{result}</p>

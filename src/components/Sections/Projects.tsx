@@ -25,8 +25,7 @@ function ProjectsTrack() {
     <div className="projects-track">
       {projects.map((proj) => (
         <div className="projects-modal-box custom-border-effect card">
-          <span className="border-1"></span>
-          <span className="border-2"></span>
+          <span className="border"></span>
           <div
             className="projects-modal-image-box"
             style={{ marginBottom: "1em" }}
@@ -53,8 +52,7 @@ function ProjectsTrack() {
               rel="noopener noreferrer"
               className="btn btn-dark link-button button-primary custom-border-effect"
             >
-              <span className="border-1"></span>
-              <span className="border-2"></span>
+              <span className="border"></span>
               {<FaPlay />}
               Demo
             </a>
@@ -64,8 +62,7 @@ function ProjectsTrack() {
               rel="noopener noreferrer"
               className="btn btn-outline-dark link-button button-secondary custom-border-effect"
             >
-              <span className="border-1"></span>
-              <span className="border-2"></span>
+              <span className="border"></span>
               {<FaGithub />}
               Code
             </a>

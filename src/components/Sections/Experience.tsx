@@ -53,8 +53,6 @@ export default function Experience() {
               }}
               layout
             >
-              <span className="border-1"></span>
-              <span className="border-2"></span>
               {exp.role}
             </motion.button>
           ))}
@@ -66,8 +64,7 @@ export default function Experience() {
   function RightPanel() {
     return (
       <div className="experience-right-panel card custom-border-effect">
-        <span className="border-1"></span>
-        <span className="border-2"></span>
+        <span className="border"></span>
         {selected && (
           <>
             <h2>
