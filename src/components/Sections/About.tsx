@@ -12,6 +12,7 @@ export default function About() {
   return (
     <section className="about-me-top-container">
       <LeftPanel />
+      <div className="about-me-center-panel"></div>
       <RightPanel />
     </section>
   );
@@ -23,9 +24,11 @@ function LeftPanel() {
       <div className="about-me-text">
         <h2 className="experience-header">About Me</h2>
         <p>
-          I am a developer who just loves to code! What matters to me is
-          building projects with good design, learning from every opportunity,
-          and putting care and dedication into my work.
+          I enjoy programming as a blend of creativity, logic, and
+          problem-solving. With 6 years of experience, I’ve worked on AI-focused
+          projects, game development, and data-driven challenges. Currently, I’m
+          building personal projects while learning React to strengthen my web
+          development skills.
         </p>
         <p>
           In my free time I spend time with friends and family, walk my dog
@@ -49,29 +52,17 @@ function LeftPanel() {
 function RightPanel() {
   return (
     <div className="about-me-right-panel">
-      <div className="expertese-container card custom-border-effect">
-        <span className="border"></span>
-        <h2 style={{ textAlign: "center" }}>Core Expertise</h2>
-
-        <div className="skill-bars-container">
-          {expertise.map((item) => (
-            <div className="skill-percentage-and-bar-container">
-              <div className="skill-and-percentage-container">
-                <p className="flexbox-push-right">{item.skill}</p>
-                <p className="">{item.percentage}%</p>
-              </div>
-
-              <div className="percentage-bar-empty">
-                <div
-                  className="percentage-bar-full"
-                  style={{
-                    width: `${item.percentage}%`,
-                  }}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
+      <div
+        className="headshot-container custom-border-effect"
+        style={{ marginTop: "25%" }}
+      >
+        <span className="border thick"></span>
+        <img className="headshot" src="/Images/Photos/on-horse.jpg"></img>
+        {/* <img className="headshot" src="/Images/Photos/boat.jpg"></img> */}
+        {/* <img className="headshot" src="/Images/Photos/grad.jpg"></img> */}
+        {/* <img className="headshot" src="/Images/Photos/palmer-adoption.jpg"></img> */}
+        {/* <img className="headshot" src="/Images/Photos/palmer.jpg"></img> */}
+        {/* <img className="headshot" src="/Images/Photos/silver-lake.jpg"></img> */}
       </div>
     </div>
   );

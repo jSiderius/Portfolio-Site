@@ -5,6 +5,7 @@
 
 .top-container{
 	display: flex;
+	height: 95vh;
 }
 
 .left-panel{

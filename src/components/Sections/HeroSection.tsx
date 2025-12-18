@@ -4,7 +4,7 @@ function HeroSection() {
   return (
     <>
       {/* PNG of face */}
-      <section className="vh-100 top-container">
+      <section className="top-container">
         <div className="left-panel">
           <div className="headshot-container custom-border-effect">
             <span className="border thick"></span>
