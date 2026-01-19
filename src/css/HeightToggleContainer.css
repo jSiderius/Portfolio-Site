@@ -1,0 +1,13 @@
+.height-toggle-container{
+	/* interpolate-size: allow-keywords; */
+	/* transition: clip-path 1s linear; */
+	/* overflow: hidden; */
+	flex: 3 1 0;
+	/* height: auto; */
+	/* clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); */
+}
+
+/* .height-toggle-container.close{
+	transition: clip-path 1s linear;
+	clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+} */

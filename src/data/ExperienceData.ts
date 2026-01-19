@@ -3,7 +3,9 @@ import type { ExperienceEntry } from "../models/ExperienceEntry";
 
 export const experiences: ExperienceEntry[] = [
 	{
-		id: 1,
+		id: 0,
+		referenceId: null,
+		type: "Professional",
 		role: "Academic Assistant",
 		company: "Queen's University",
 		timePeriod: "May 2025 - Present",
@@ -23,7 +25,9 @@ export const experiences: ExperienceEntry[] = [
 		],
 	},
 	{
-		id: 2,
+		id: 1,
+		referenceId: null,
+		type: "Professional",
 		role: "Game Developer",
 		company: "Queen's University",
 		timePeriod: "May 2025 - August 2025",
@@ -40,7 +44,9 @@ export const experiences: ExperienceEntry[] = [
 	],
 	},
 	{
-		id: 3,
+		id: 2,
+		referenceId: null,
+		type: "Professional",
 		role: "AI Research Assistant",
 		company: "Ross Video",
 		timePeriod: "May 2023-August 2024",
@@ -72,7 +78,9 @@ export const experiences: ExperienceEntry[] = [
 		],
 	},
 	{
-		id: 4,
+		id: 3,
+		referenceId: null,
+		type: "Professional",
 		role: "Teaching Assistant",
 		company: "Carleton University",
 		timePeriod: "September 2022 - May 2023",
@@ -91,7 +99,9 @@ export const experiences: ExperienceEntry[] = [
 		],
 	},
 	{
-		id: 5,
+		id: 4,
+		referenceId: 5,
+		type: "Professional",
 		role: "Academic Experience",
 		company: "",
 		timePeriod: "",
@@ -99,12 +109,11 @@ export const experiences: ExperienceEntry[] = [
 		resumeBullets: [],
 		keyProjects: [],
 		
-	}
-]
-
-export const academicExperiences: ExperienceEntry[] = [
+	},
 	{
-		id: 1,
+		id: 5,
+		referenceId: null,
+		type: "Academic",
 		role: "Bachelor of Computer Science",
 		company: "Carleton University",
 		timePeriod: "2019-2025",
@@ -116,7 +125,9 @@ export const academicExperiences: ExperienceEntry[] = [
 	},
 
 	{
-		id: 2,
+		id: 6,
+		referenceId: null,
+		type: "Academic",
 		role: "Statistics Minor",
 		company: "Carleton University",
 		timePeriod: "2019-2025",
@@ -126,7 +137,9 @@ export const academicExperiences: ExperienceEntry[] = [
 		"Completed courses covering advanced statistical models and their applications in depth."],
 	},
 	{
-		id: 3,
+		id: 7,
+		referenceId: null,
+		type: "Academic",
 		role: "Math Minor",
 		company: "Carleton University",
 		timePeriod: "2019-2025",
@@ -136,16 +149,9 @@ export const academicExperiences: ExperienceEntry[] = [
 			"Covered foundational math topics including: Calculus 1-3, Linear Algebra 1-2, Discrete Mathematics, and Computational Modelling."],
 	},
 	{
-		id: 5,
-		role: "test",
-		company: "test",
-		timePeriod: "",
-		workLocationType: "",
-		keyProjects: [],
-		resumeBullets: [""],
-	},
-	{
-		id: 4,
+		id: 8,
+		referenceId: 0,
+		type: "Academic",
 		role: "Professional Experience",
 		company: "",
 		timePeriod: "",

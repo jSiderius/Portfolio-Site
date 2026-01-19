@@ -1,10 +1,9 @@
 .experience-top-container{
-	min-height: 100vh;
+	/* min-height: 100vh; */
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	padding: 5% 10% 10% 10%;
-
 }
 
 .experience-header{
@@ -40,8 +39,6 @@
 	
 	flex: 3 1 0;
 	min-width: 0;
-
-	transition: height 3s ease;
 }
 
 .experience-button{

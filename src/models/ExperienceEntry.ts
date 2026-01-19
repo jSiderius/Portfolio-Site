@@ -8,6 +8,8 @@ interface KeyProjectEntry{
 
 export interface ExperienceEntry{
 	id: number;
+	referenceId: number | null;
+	type: string;
 	role: string;
 	company: string;
 	timePeriod: string;
