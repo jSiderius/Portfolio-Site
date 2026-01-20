@@ -45,62 +45,69 @@ function UserInputForm() {
   };
 
   return (
-    <form
-      id="contact-form"
-      onSubmit={onSubmit}
-      // className="custom-border-effect contact-user-input-panel"
-      className="contact-user-input-panel"
-      style={{ width: "80%" }}
-    >
-      {/* <span className="border thick"></span> */}
-      <div className="name-email-conatiner">
-        <label className="custom-field two">
-          <input type="text" name="name" placeholder="" required />
-          <span className="placeholder">Name</span>
-          {/* <span className="border"></span> */}
-        </label>
+    <div className="form-container">
+      <div className="form-inner">
+        <div className="form-front"></div>
+        <div className="form-back">
+          <form
+            id="contact-form"
+            onSubmit={onSubmit}
+            // className="custom-border-effect contact-user-input-panel"
+            className="form"
+            style={{ width: "80%" }}
+          >
+            {/* <span className="border thick"></span> */}
+            <div className="name-email-conatiner">
+              <label className="custom-field two">
+                <input type="text" name="name" placeholder="" required />
+                <span className="placeholder">Name</span>
+                {/* <span className="border"></span> */}
+              </label>
 
-        <label className="custom-field two">
-          <input type="text" name="email" placeholder="" required />
-          <span className="placeholder">Email</span>
-          {/* <span className="border"></span> */}
-        </label>
+              <label className="custom-field two">
+                <input type="text" name="email" placeholder="" required />
+                <span className="placeholder">Email</span>
+                {/* <span className="border"></span> */}
+              </label>
+            </div>
+
+            <label className="custom-field two">
+              <input type="text" name="subject" placeholder="" />
+              <span className="placeholder">Subject</span>
+              {/* <span className="border"></span> */}
+            </label>
+
+            <label className="custom-field one">
+              <textarea
+                // className=""
+                placeholder=""
+                rows={4}
+                name="message"
+                required
+              />
+              <span className="placeholder">Message</span>
+              {/* <span className="border"></span> */}
+            </label>
+
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <button
+                className="custom-border-effect submission-button"
+                type="submit"
+              >
+                Submit{" "}
+              </button>
+            </div>
+            <p>{result}</p>
+          </form>
+        </div>
       </div>
-
-      <label className="custom-field two">
-        <input type="text" name="subject" placeholder="" />
-        <span className="placeholder">Subject</span>
-        {/* <span className="border"></span> */}
-      </label>
-
-      <label className="custom-field one">
-        <textarea
-          // className=""
-          placeholder=""
-          rows={4}
-          name="message"
-          required
-        />
-        <span className="placeholder">Message</span>
-        {/* <span className="border"></span> */}
-      </label>
-
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <button
-          className="custom-border-effect submission-button"
-          type="submit"
-        >
-          Submit{" "}
-        </button>
-      </div>
-      <p>{result}</p>
-    </form>
+    </div>
   );
 }
 export default Contact;
