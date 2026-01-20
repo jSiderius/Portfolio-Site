@@ -48,10 +48,11 @@ function UserInputForm() {
     <form
       id="contact-form"
       onSubmit={onSubmit}
-      className="custom-border-effect contact-user-input-panel"
+      // className="custom-border-effect contact-user-input-panel"
+      className="contact-user-input-panel"
       style={{ width: "80%" }}
     >
-      <span className="border thick"></span>
+      {/* <span className="border thick"></span> */}
       <div className="name-email-conatiner">
         <label className="custom-field two">
           <input type="text" name="name" placeholder="" required />
