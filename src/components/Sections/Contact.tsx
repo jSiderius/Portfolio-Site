@@ -47,7 +47,9 @@ function UserInputForm() {
   return (
     <div className="form-container">
       <div className="form-inner">
-        <div className="form-front"></div>
+        <div className="form-front">
+          <div className="envelope-centerline"></div>
+        </div>
         <div className="form-back">
           <form
             id="contact-form"
