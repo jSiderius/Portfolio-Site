@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import type { Variants } from "framer-motion";
-import { useRef, useState, useEffect, useLayoutEffect } from "react";
+import { useRef, useState, useLayoutEffect } from "react";
 import { experiences } from "../../../data/ExperienceData";
 import { FaCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
 

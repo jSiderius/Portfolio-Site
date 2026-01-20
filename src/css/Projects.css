@@ -1,6 +1,7 @@
 .projects-top-container{
 	height: 100vh;
 	width: 100%;
+	overflow: hidden;
 }
 
 .projects-header{
@@ -16,10 +17,6 @@
 	gap: 0%;
 }
 
-.projects-track-container:has(.projects-modal-box:hover) .projects-track {
-  animation-play-state: paused;
-}
-
 .projects-track{
 	height: 100%;
 	display: inline-flex;
@@ -30,7 +27,6 @@
 .projects-modal-box{
 	height: 100%;
 	width: 400px;
-	/* background-color: var(--secondary-bg-color); */
 	margin: 1rem;
 	padding: 30px;
 	display: flex;
@@ -60,7 +56,6 @@
 	background-repeat: no-repeat;
 	display: flex;
 	justify-content: center;
-	/* background-color: aliceblue; */
 }
 
 .projects-modal-image{
@@ -89,7 +84,6 @@
 	backdrop-filter: blur(6px);
 	transition: background 0.3s ease, border-color 0.3s ease;
 	margin: 0;
-
 }
 
 .flexbox-push{
@@ -115,9 +109,18 @@
 	background-color: var(--highlight-color) !important;
 }
 
+
+.projects-track-container:has(.projects-modal-box:hover) .projects-track
+/* .projects-track-container:focus-within .projects-track */
+{
+  animation-play-state: paused;
+}
+
+/* .button-secondary:focus, */
 .button-secondary:hover{
 	background-color: var(--highlight-color) !important;
 }
+
 @keyframes scroll {
   from {
     transform: translateX(0%);

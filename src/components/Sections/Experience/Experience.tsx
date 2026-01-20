@@ -1,11 +1,6 @@
 import "../../../css/Experience.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { experiences } from "../../../data/ExperienceData";
-import { motion, AnimatePresence } from "framer-motion";
-import type { Variants } from "framer-motion";
-import { select } from "framer-motion/client";
-import { images } from "../image-data";
-import { wrap } from "popmotion";
 
 import { ExperienceDataPanel } from "./ExperienceDataPanel";
 

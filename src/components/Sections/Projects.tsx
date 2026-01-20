@@ -47,6 +47,7 @@ function ProjectsTrack() {
 
           <div className="link-button-container flexbox-push">
             <a
+              tabIndex={-1}
               href={proj.demoLink}
               target={proj.demoLink == "#" ? "_self" : "_blank"}
               rel="noopener noreferrer"
@@ -56,7 +57,10 @@ function ProjectsTrack() {
               {<FaPlay />}
               Demo
             </a>
+
+            {/* TODO: Future implementation to allow tabbing to the projects scroll */}
             <a
+              tabIndex={-1}
               href={proj.githubLink}
               target="_blank"
               rel="noopener noreferrer"
