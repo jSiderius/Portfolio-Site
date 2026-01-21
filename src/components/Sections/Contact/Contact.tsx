@@ -1,7 +1,8 @@
 import { useState } from "react";
-import "../../css/Contact.css";
-import "../../css/Input.css";
-import "../../css/CustomBorderEffect.css";
+import "../../../css/Contact.css";
+import "../../../css/Input.css";
+import "../../../css/CustomBorderEffect.css";
+import { GlowBox } from "./GlowBox";
 
 function Contact() {
   return (
@@ -48,7 +49,8 @@ function UserInputForm() {
     <div className="form-container">
       <div className="form-inner">
         <div className="form-front">
-          <div className="envelope-centerline"></div>
+          <GlowBox />
+          <span className="envelope-centerline"></span>
         </div>
         <div className="form-back">
           <form
