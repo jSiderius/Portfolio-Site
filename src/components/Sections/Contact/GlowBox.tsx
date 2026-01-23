@@ -30,7 +30,7 @@ export const GlowBox = () => {
       8 * (width + height) +
       4 * Math.sqrt(Math.pow(width / 2, 2) + Math.pow(height / 2, 2));
 
-    const dashLength = length * 0.04;
+    const dashLength = length * 0.1;
     path.style.strokeDasharray = `${dashLength} ${length - dashLength}`;
 
     let start: number | null = null;

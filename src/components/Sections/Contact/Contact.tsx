@@ -6,7 +6,6 @@ import { GlowBox } from "./GlowBox";
 
 import HoverIcon from "../../../../public/Images/Envelope/hover.svg?react";
 import ToIcon from "../../../../public/Images/Envelope/to.svg?react";
-import SVG from "react-inlinesvg";
 
 function Contact() {
   return (
@@ -15,17 +14,15 @@ function Contact() {
         <h1 className="experience-header">Let's Connect</h1>
         <UserInputForm />
         <div className="contact-socials-container">
-          <div className="d-flex justify-content-flex-start gap-4 fs-1">
-            <a href="https://github.com/jSiderius">
-              <img className="icon" src="Icons/Github.svg" alt="" />
-            </a>
-            <a href="https://www.linkedin.com/in/joshua-siderius-0697a11a3/">
-              <img className="icon" src="Icons/LinkedIn.svg" alt="" />
-            </a>
-            <a href="mailto:jsiderius0@gmail.com">
-              <img className="icon" src="Icons/Gmail.svg" alt="" />
-            </a>
-          </div>
+          <a href="https://github.com/jSiderius">
+            <img className="contact-icon" src="Icons/Github.svg" alt="" />
+          </a>
+          <a href="https://www.linkedin.com/in/joshua-siderius-0697a11a3/">
+            <img className="contact-icon" src="Icons/LinkedIn.svg" alt="" />
+          </a>
+          <a href="mailto:jsiderius0@gmail.com">
+            <img className="contact-icon" src="Icons/Gmail.svg" alt="" />
+          </a>
         </div>
       </section>
     </>
@@ -62,41 +59,29 @@ function UserInputForm() {
           <form
             id="contact-form"
             onSubmit={onSubmit}
-            // className="custom-border-effect contact-user-input-panel"
             className="form"
             style={{ width: "80%" }}
           >
-            {/* <span className="border thick"></span> */}
             <div className="name-email-conatiner">
               <label className="custom-field two">
                 <input type="text" name="name" placeholder="" required />
                 <span className="placeholder">Name</span>
-                {/* <span className="border"></span> */}
               </label>
 
               <label className="custom-field two">
                 <input type="text" name="email" placeholder="" required />
                 <span className="placeholder">Email</span>
-                {/* <span className="border"></span> */}
               </label>
             </div>
 
             <label className="custom-field two">
               <input type="text" name="subject" placeholder="" />
               <span className="placeholder">Subject</span>
-              {/* <span className="border"></span> */}
             </label>
 
             <label className="custom-field one">
-              <textarea
-                // className=""
-                placeholder=""
-                rows={4}
-                name="message"
-                required
-              />
+              <textarea placeholder="" rows={4} name="message" required />
               <span className="placeholder">Message</span>
-              {/* <span className="border"></span> */}
             </label>
 
             <div
