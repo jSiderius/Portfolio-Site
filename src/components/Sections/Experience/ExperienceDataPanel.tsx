@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import type { Variants } from "framer-motion";
-import { useRef, useState, useLayoutEffect } from "react";
+import { useRef } from "react";
 import { experiences } from "../../../data/ExperienceData";
 import { FaCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
 
@@ -10,44 +10,38 @@ type ExperienceDataPanelProps = {
 
 export function ExperienceDataPanel(props: ExperienceDataPanelProps) {
   const motionDiv = useRef<HTMLDivElement>(null);
-  const [prevHeight, setPrevHeight] = useState<number>(0);
-  const [height, setHeight] = useState<number>(0);
-
-  useLayoutEffect(() => {
-    if (!motionDiv.current) return;
-    setPrevHeight(height);
-    setHeight(motionDiv.current.scrollHeight);
-    console.log(prevHeight, height);
-    // console.log(motionDiv.current.offsetHeight);
-  }, [props.selectedId]);
 
   const variants: Variants = {
-    open: (h: number) => ({
-      clipPath: "inset(0% 0% 0% 0%)",
-      transition: {
-        duration: h / 600,
-        // duration: 1,
-        ease: "linear",
-      },
-    }),
-    closed: (h: number) => ({
-      clipPath: "inset(0% 0% 100% 0%)",
-      transition: {
-        duration: h / 600,
-        // duration: 1,
-        ease: "linear",
-      },
-    }),
+    open: () => {
+      const height = motionDiv.current ? motionDiv.current.scrollHeight : 600;
+      return {
+        clipPath: "inset(0% 0% 0% 0%)",
+        transition: {
+          duration: height / 600,
+          ease: "easeIn" as const,
+        },
+      };
+    },
+    closed: () => {
+      const height = motionDiv.current ? motionDiv.current.scrollHeight : 600;
+      return {
+        clipPath: "inset(0% 0% 100% 0%)",
+        transition: {
+          duration: height / 600,
+          ease: "easeOut" as const,
+        },
+      };
+    },
   };
 
   return (
     <AnimatePresence mode="wait">
       {props.selectedId !== null && props.selectedId !== undefined && (
         <motion.div
+          layout
           ref={motionDiv}
           key={props.selectedId}
           className="height-toggle-container card experience-right-panel custom-border-effect"
-          custom={height}
           variants={variants}
           initial="closed"
           animate="open"
