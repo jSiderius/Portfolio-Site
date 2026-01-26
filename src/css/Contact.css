@@ -230,7 +230,7 @@
 
 .contact-socials-container{
 	box-shadow: 0 0 10px var(--highlight-color) inset;
-	border-radius: 00px 10px;
+	border-radius: 0px 10px;
 
 	display: flex;
 	align-items: center;
