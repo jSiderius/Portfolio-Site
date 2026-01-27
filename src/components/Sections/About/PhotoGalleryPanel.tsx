@@ -1,22 +1,56 @@
+import { useEffect, useState } from "react";
+
 export function PhotoGalleryPanel() {
+  const images: Array<string> = [
+    "/Images/Photos/boat.jpg",
+    "/Images/Photos/palmer.jpg",
+    "/Images/Photos/palmer-adoption.jpg",
+    "/Images/Photos/on-horse.jpg",
+    "/Images/Photos/on-horse.jpg",
+    "/Images/Photos/on-horse.jpg",
+    "/Images/Photos/on-horse.jpg",
+    "/Images/Photos/on-horse.jpg",
+    "/Images/Photos/on-horse.jpg",
+  ];
+  const [imageIndices, setImageIndices] = useState<Array<number>>([]);
+  function addIndex(newIndex: number) {
+    setImageIndices((prev) => [...prev, newIndex]);
+  }
+
+  useEffect(() => {
+    // TODO: Turn this off when hovering
+    // TODO: Make sure that the next of images is NOT selected from one of the previous images
+    const interval = setInterval(() => {
+      setImageIndices([]);
+      for (let i = 0; i < Math.floor(Math.random() * 3) + 1; i++)
+        addIndex(Math.floor(Math.random() * images.length));
+    }, 5000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [images.length]);
+
   return (
     <div
+      // key={imageIndices}
       style={{
         display: "flex",
-        // justifyContent: "center",
-        // alignItems: "center",
         width: "100%",
-        // height: "100%",
         padding: "0 5% 0 5%",
       }}
     >
       <div className="gallery">
-        <img src="/Images/Photos/boat.jpg" alt="" />
-        <img src="/Images/Photos/palmer.jpg" alt="" />
-        <img src="/Images/Photos/palmer-adoption.jpg" alt="" />
-        <img src="/Images/Photos/on-horse.jpg" alt="" />
-        <img src="/Images/Photos/on-horse.jpg" alt="" />
-        <img src="/Images/Photos/on-horse.jpg" alt="" />
+        {images.map((image: string, i: number) => {
+          return (
+            <img
+              key={image + i}
+              className={i in imageIndices ? "active" : ""}
+              src={image}
+              alt=""
+            />
+          );
+        })}
       </div>
     </div>
   );

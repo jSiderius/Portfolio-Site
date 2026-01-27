@@ -14,24 +14,20 @@ export function ExperienceDataPanel(props: ExperienceDataPanelProps) {
   const variants: Variants = {
     open: () => {
       const height = motionDiv.current ? motionDiv.current.scrollHeight : 600;
-      console.log(`Open: height: ${height}, duration: ${height / 600}s`);
       return {
         clipPath: "inset(0% 0% 0% 0%)",
         transition: {
           duration: height / 600,
-          // ease: "easeIn" as const,
           ease: "linear" as const,
         },
       };
     },
     closed: () => {
       const height = motionDiv.current ? motionDiv.current.scrollHeight : 600;
-      console.log(`Close: height: ${height}, duration: ${height / 600}s`);
       return {
         clipPath: "inset(0% 0% 100% 0%)",
         transition: {
           duration: height / 600,
-          // ease: "easeOut" as const,
           ease: "linear" as const,
         },
       };

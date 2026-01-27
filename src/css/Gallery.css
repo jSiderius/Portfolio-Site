@@ -3,8 +3,8 @@
   
   display: grid;
   align-self: center;
-  aspect-ratio: 5/3;
-  grid-template-rows: repeat(3, 1fr);
+  aspect-ratio: 1;
+  grid-template-rows: repeat(5, 1fr);
   grid-template-columns: repeat(5, 1fr);
   gap: var(--g);
 
@@ -21,11 +21,15 @@
   object-fit: cover;
   filter: grayscale();
   cursor: pointer;
-  transition: .5s
+  transition: 0.5s
 }
 
-.gallery img:hover {
+.gallery img:hover, .gallery img.active {
   filter: grayscale(0);
+}
+
+.gallery img.active{
+  transition: 1s;
 }
 
 .gallery img:nth-child(1){
@@ -42,8 +46,8 @@
 }
 
 .gallery img:nth-child(4) {
-  grid-area: 2/1/span 2/span 2;
-  clip-path: polygon(0 0,calc(50% - var(--g)/4) 0,100% calc(50% + var(--g)/4),100% 100%,0 100%);
+  grid-area: 2/1/span 3/span 2;
+  clip-path: polygon(0 0,calc(50% - var(--g)/4) 0,100% calc(33% + var(--g)/4), 100% calc(66% + var(--g)/4), calc(50% - var(--g)/4) 100%,0 100%);
 }
 
 .gallery img:nth-child(5) {
@@ -51,7 +55,20 @@
 }
 
 .gallery img:nth-child(6) {
-	grid-area: 2/4/span 2/span 2;
+	grid-area: 2/4/span 3/span 2;
 	/* clip-path: polygon(0 0,calc(50% - var(--g)/4) 0, 100% calc(50% + var(--g)/4),100% 100%,0 100%); */
-	clip-path: polygon(calc(50% + var(--g)/4) 0%, 100% 0%, 100% 100%, 0% 100%, 0% calc(50% + var(--g)/4));
+	clip-path: polygon(0% calc(33% + var(--g)/4), calc(50% + var(--g)/4) 0%, 100% 0%, 100% 100%, calc(50% + var(--g)/4) 100%, 0% calc(66% + var(--g)/4));
 }
+
+.gallery img:nth-child(7) {
+	grid-area: 5/0/span 1/span 1;
+}
+
+.gallery img:nth-child(8) {
+	grid-area: 4/2/span 2/span 3;
+	/* clip-path: polygon(0 0,calc(50% - var(--g)/4) 0, 100% calc(50% + var(--g)/4),100% 100%,0 100%); */
+	/* clip-path: polygon(0% calc(50% + var(--g)/4), calc(33% + var(--g)/4) 0%, calc(66% + var(--g)/4) 0%, 100% calc(50% + var(--g)/4)), 100% 100%, 0% 100%; */
+  clip-path: polygon(0% calc(50% - var(--g)/4), calc(33% - var(--g)/4) 0%, calc(66% - var(--g)/4) 0%, 100% calc(50% - var(--g)/4), 100% 100%, 0% 100%);
+}
+
+/* TODO: Make the gap pixel perfect */
