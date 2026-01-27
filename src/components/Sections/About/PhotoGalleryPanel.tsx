@@ -1,16 +1,21 @@
 import { useEffect, useState } from "react";
 
+import boat from "@/assets/Images/Photos/boat.jpg";
+import palmer from "@/assets/Images/Photos/palmer.jpg";
+import palmer_adoption from "@/assets/Images/Photos/palmer-adoption.jpg";
+import on_horse from "@/assets/Images/Photos/on-horse.jpg";
+
 export function PhotoGalleryPanel() {
   const images: Array<string> = [
-    "/Images/Photos/boat.jpg",
-    "/Images/Photos/palmer.jpg",
-    "/Images/Photos/palmer-adoption.jpg",
-    "/Images/Photos/on-horse.jpg",
-    "/Images/Photos/on-horse.jpg",
-    "/Images/Photos/on-horse.jpg",
-    "/Images/Photos/on-horse.jpg",
-    "/Images/Photos/on-horse.jpg",
-    "/Images/Photos/on-horse.jpg",
+    boat,
+    palmer,
+    palmer_adoption,
+    on_horse,
+    on_horse,
+    on_horse,
+    on_horse,
+    on_horse,
+    on_horse,
   ];
   const [imageIndices, setImageIndices] = useState<Array<number>>([]);
   function addIndex(newIndex: number) {

@@ -4,9 +4,8 @@ import "../../../css/Input.css";
 import "../../../css/CustomBorderEffect.css";
 import { GlowBox } from "./GlowBox";
 
-// TODO: Reintegrate
-// import HoverIcon from "../../../../public/Images/Envelope/hover.svg?react";
-// import ToIcon from "../../../../public/Images/Envelope/to.svg?react";
+import to_icon from "@/assets/Images/Envelope/to.svg";
+import hover_icon from "@/assets/Images/Envelope/hover.svg";
 
 function Contact() {
   return (
@@ -52,8 +51,8 @@ function UserInputForm() {
       <div className="form-inner">
         <div className="form-front">
           <GlowBox />
-          {/* <HoverIcon className="hover-icon" fill="currentColor"></HoverIcon> */}
-          {/* <ToIcon className="to-icon"></ToIcon> */}
+          <img className="hover-icon" src={hover_icon} alt="" />
+          <img className="to-icon" src={to_icon} alt="" />
           <span className="envelope-centerline"></span>
         </div>
         <div className="form-back">

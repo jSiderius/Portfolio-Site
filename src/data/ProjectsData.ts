@@ -1,4 +1,9 @@
 import type { ProjectEntry } from "../models/ProjectEntry"
+import logo from "@/assets/Images/Project/logo.png";
+import map_gen from "@/assets/Images/Project/map-gen.png";
+import bubble_escape from "@/assets/Images/Project/bubble-escape.jpg";
+import jeopardy_search from "@/assets/Images/Project/jeopardy-search.jpg";
+import secret_santa from "@/assets/Images/Project/santa.png";
 
 export const projects: ProjectEntry[] = [
 	{
@@ -8,7 +13,7 @@ export const projects: ProjectEntry[] = [
 		demoLink: "#",
 		githubLink: "https://github.com/jSiderius/Portfolio-Site",
 		techStack: ["React", "Typescript", "Javascript", "HTML", "CSS"],
-		imagePath: "/Images/JS.png"
+		imagePath: logo
 	},
 	{
 		date: "April 2025",
@@ -17,7 +22,7 @@ export const projects: ProjectEntry[] = [
 		demoLink: "",
 		githubLink: "https://github.com/jSiderius/MapGen",
 		techStack: ["Godot", "GDScript", "DS&A"],
-		imagePath: "/Images/map-gen.png"
+		imagePath: map_gen
 	},
 	{
 		date: "February 2025",
@@ -26,7 +31,7 @@ export const projects: ProjectEntry[] = [
 		demoLink: "https://jsiderius.itch.io/bubble-escape",
 		githubLink: "https://github.com/jSiderius/GlobalGameJam2025",
 		techStack: ["Godot", "GDScript"],
-		imagePath: "/Images/bubble-escape.jpg"
+		imagePath: bubble_escape
 	},
 	{
 		date: "December 2024",
@@ -35,7 +40,7 @@ export const projects: ProjectEntry[] = [
 		demoLink: "https://github.com",
 		githubLink: "https://github.com/jSiderius/AI_Search_Engine",
 		techStack: ["Python", "Javascript", "HTML", "CSS"],
-		imagePath: "/Images/jeopardy-search.jpg"
+		imagePath: jeopardy_search
 	},
 	{
 		date: "September 2022",
@@ -44,6 +49,6 @@ export const projects: ProjectEntry[] = [
 		demoLink: "https://github.com",
 		githubLink: "https://github.com/jSiderius/SecretSanta",
 		techStack: ["Python", "SMTP"],
-		imagePath: "/Images/santa.png"
+		imagePath: secret_santa
 	}
 ]

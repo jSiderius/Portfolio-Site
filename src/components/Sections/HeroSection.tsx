@@ -1,4 +1,5 @@
 import "../../css/HeroSection.css";
+import grad from "@/assets/Images/Photos/grad.jpg";
 
 function HeroSection() {
   return (
@@ -8,12 +9,7 @@ function HeroSection() {
         <div className="left-panel">
           <div className="headshot-container custom-border-effect">
             <span className="border thick"></span>
-            {/* <img className="headshot" src="/Images/Photos/on-horse.jpg"></img> */}
-            {/* <img className="headshot" src="/Images/Photos/boat.jpg"></img> */}
-            <img className="headshot" src="/Images/Photos/grad.jpg"></img>
-            {/* <img className="headshot" src="/Images/Photos/palmer-adoption.jpg"></img> */}
-            {/* <img className="headshot" src="/Images/Photos/palmer.jpg"></img> */}
-            {/* <img className="headshot" src="/Images/Photos/silver-lake.jpg"></img> */}
+            <img className="headshot" src={grad}></img>
           </div>
         </div>
 
