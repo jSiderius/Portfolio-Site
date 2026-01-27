@@ -1,6 +1,3 @@
-import type { ProjectEntry } from './ProjectEntry.ts'
-
-
 interface KeyProjectEntry{
 	name: string;
 	synopsis: string;

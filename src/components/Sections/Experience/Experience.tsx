@@ -1,5 +1,5 @@
 import "../../../css/Experience.css";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { experiences } from "../../../data/ExperienceData";
 
 import { ExperienceDataPanel } from "./ExperienceDataPanel";
@@ -16,7 +16,7 @@ export default function Experience() {
       <div className="experience-left-panel">
         <AnimatePresence>
           {experiences.map(
-            (exp, i) =>
+            (exp) =>
               exp.type === experienceType && (
                 <motion.button
                   key={exp.id}
