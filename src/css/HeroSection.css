@@ -3,38 +3,55 @@
 	background: linear-gradient(to right, #0b1930 0%, #0b1930 40%, #11171e 40%, #11171e 100%);
 }
 
-.top-container{
-	display: flex;
-	height: 100vh;
+.hero-container{
+	display: grid;
+	/* gap: 1rem; */
+	min-height: 80vh;
+	margin-bottom: 20px;
 }
 
+@media (min-width: 775px) {
+	.hero-container {
+		grid-template-columns: auto auto;
+	}
+	.hero-container .left-panel{
+		justify-self: right;
+	}
+
+	.hero-container .left-panel .headshot-container{
+		max-width: 300px;
+	}
+}
+
+
 .left-panel{
-	flex-grow: 2;
-	/* background-color: var(--tertiary-bg-color); */
 	display: flex;
-	justify-content: right;
+	justify-content: center;
+	margin: 20px;
 	align-items: center;
+
 }
 
 .right-panel{
-	flex-grow: 3;
-	/* background-color: var(--primary-bg-color); */
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
+
+	margin: 0 20px 0 20px;
 }
 
 .dev-objectives-paragraph{
 	max-width: 600px;
 	margin: 0, 10%, 0, 10%;
+	/* align-items: center; */
 }
 
 .headshot-container {
-  width: 300px;
-  height: 300px;
+  max-width: 250px;
+  aspect-ratio: 1;
   border-radius: 10%;
   overflow: hidden;
-  /* position: relative; */
 }
 
 .headshot{
@@ -47,6 +64,15 @@
 .headshot-container .headshot {
   transform: scale(1.8);     /* zooms image inside container */
 }
+
+.icon-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-size: 2.5rem;
+}
+
 
 .icon{
 	width: 50px;

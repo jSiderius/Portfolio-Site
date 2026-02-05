@@ -5,7 +5,7 @@ function HeroSection() {
   return (
     <>
       {/* PNG of face */}
-      <section className="top-container">
+      <section className="hero-container">
         <div className="left-panel">
           <div className="headshot-container custom-border-effect">
             <span className="border thick"></span>
@@ -14,7 +14,7 @@ function HeroSection() {
         </div>
 
         <div className="right-panel">
-          <div>
+          <div className="right-panel-inner">
             <h2>Joshua Siderius</h2>
             <h5>Software Developer</h5>
             <p className="dev-objectives-paragraph">
@@ -22,7 +22,7 @@ function HeroSection() {
               building projects with good design, learning from every
               opportunity, and putting care and dedication into my work.
             </p>
-            <div className="d-flex justify-content-flex-start gap-4 fs-1">
+            <div className="icon-container">
               <img className="icon" src="Icons/Python.svg" alt="" />
               <img className="icon" src="Icons/React.svg" alt="" />
               <img className="icon" src="Icons/JavaScript.svg" alt="" />
