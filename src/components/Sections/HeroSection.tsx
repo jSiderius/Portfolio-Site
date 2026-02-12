@@ -6,11 +6,13 @@ function HeroSection() {
     <>
       {/* PNG of face */}
       <section className="hero-container">
-        <div className="left-panel">
-          <div className="headshot-container custom-border-effect">
-            <span className="border thick"></span>
-            <img className="headshot" src={grad}></img>
-          </div>
+        <div className="headshot-container custom-border-effect">
+          <span className="border thick"></span>
+          <img
+            className="headshot"
+            src={grad}
+            style={{ objectPosition: "0% 10%" }}
+          ></img>
         </div>
 
         <div className="right-panel">
