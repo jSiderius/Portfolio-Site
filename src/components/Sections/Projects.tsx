@@ -7,7 +7,18 @@ export default function Projects() {
   return (
     <>
       <section className="projects-top-container">
-        <h1 className="projects-header">Projects</h1>
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "flex-end",
+          }}
+        >
+          <h1 className="section-header" style={{ marginRight: "1em" }}>
+            Projects
+          </h1>
+        </div>
+
         <div className="projects-track-container">
           <ProjectsTrack />
           <ProjectsTrack />
@@ -34,7 +45,6 @@ function ProjectsTrack() {
               className="projects-modal-image"
               src={proj.imagePath}
               alt="Project preview"
-              style={{ width: "auto", height: "100%", objectFit: "cover" }}
             />
           </div>
           <h5>{proj.name}</h5>
