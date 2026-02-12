@@ -72,7 +72,7 @@ export function ExperienceDataPanel(props: ExperienceDataPanelProps) {
             ))}
           </ul>
 
-          <h4 style={{ marginTop: ".5em" }}>
+          <h4 style={{ margin: "0" }}>
             {experiences[props.selectedId].keyProjects.length === 0
               ? ""
               : experiences[props.selectedId].keyProjects.length === 1
@@ -80,14 +80,16 @@ export function ExperienceDataPanel(props: ExperienceDataPanelProps) {
                 : "Key Projects"}
           </h4>
 
-          <div className="key-projects-group-container">
-            {experiences[props.selectedId].keyProjects.map((proj) => (
-              <div key={proj.name} className="sub-card-textbox">
-                <h5>{proj.name}</h5>
-                <p>{proj.synopsis}</p>
-              </div>
-            ))}
-          </div>
+          {experiences[props.selectedId].keyProjects.map((proj) => (
+            <div
+              key={proj.name}
+              className="sub-card-textbox"
+              style={{ marginTop: "1rem" }}
+            >
+              <h5>{proj.name}</h5>
+              <p>{proj.synopsis}</p>
+            </div>
+          ))}
         </motion.div>
       )}
     </AnimatePresence>

@@ -15,7 +15,7 @@ export default function About() {
           alignItems: "flex-end",
         }}
       >
-        <h2 className="experience-header about-me-header">About Me</h2>
+        <h2 className="section-header about-me-header">About Me</h2>
       </div>
 
       <div

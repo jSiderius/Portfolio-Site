@@ -11,7 +11,7 @@ function Contact() {
   return (
     <>
       <section className="contact-top-container">
-        <h1 className="experience-header">Let's Connect</h1>
+        <h1 className="section-header">Let's Connect</h1>
         <UserInputForm />
         <div className="contact-socials-container">
           <a href="https://github.com/jSiderius">
