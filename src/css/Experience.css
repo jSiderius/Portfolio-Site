@@ -1,8 +1,12 @@
 .experience-top-container{
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
+	display: grid;
 	padding: 5% 10% 10% 10%;
+}
+
+@media (--mobile-l){
+	.experience-top-container{
+		background-color: red;
+	}
 }
 
 .experience-header{

@@ -29,8 +29,6 @@ html, body {
   padding: 0;
   overflow-x: hidden;
 
-   margin: 0;
-  /* min-height: 100vh; */
   background-color: #0d1117;
   background-image: 
     linear-gradient(transparent 95%, rgba(255,255,255,0.25) 96%),
@@ -57,12 +55,7 @@ html, body {
 }
 
 .border-effect:hover{
-  /* outline-offset: 4px; */
   outline: 2px solid var(--highlight-color) !important;
-}
-
-.border-effect-small:hover{
-  /* outline-offset: 2px; */
 }
 
 .border-effect-snap-close:not(:hover) {
