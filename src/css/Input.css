@@ -23,32 +23,34 @@
 	appearance: none;
 	background: #f2f2f2;
 	color: #222;
-	padding: 12px;
+	padding: 0.75em;
 	border-radius: 3px;
 	width: 100%;
 	outline: none;
-	font-size: 14px;
 }
 
 .custom-field{
 	flex-grow: 1;
 	position: relative;
-	font-size: 14px;
-	padding-top: 20px;
-	margin-bottom: 5px;
+	padding-top: 1.25em;
+	/* margin-bottom: 0.3125rem; */
+
 }
 
 .custom-field .placeholder{
 	position: absolute;
 	background: transparent;
 	color: #222;
-	left: 12px;
-	top: calc(50% + 10px);
-	transform: translateY(-50%);
+	left: 0.5em;
+	bottom: 0.6em;
 	transition:
 		font-size 0.3s ease,
 		top 0.3s ease,
 		color 0.3s ease;
+}
+
+.custom-field .text-area-placeholder{
+	top: calc(50% - 0.5em) !important;
 }
 
 .custom-field textarea + .placeholder {
@@ -59,8 +61,8 @@
 .custom-field input:focus + .placeholder,
 .custom-field textarea:not(:placeholder-shown) + .placeholder,
 .custom-field textarea:focus + .placeholder{
-	top: 8px;
-	font-size: 12px;
+	top: 0.5em;
+	font-size: 0.85em;
 	color: #222;
 }
 
@@ -80,7 +82,7 @@
 }
 
 .custom-field.one input + .placeholder{
-	padding: 0px 5px;
+	padding: 0px 0.3125em;
 }
 
 .custom-field.one input:not(:placeholder-shown) + .placeholder,
@@ -123,10 +125,6 @@
 	left: 0;
 	top: 20px;
 	border-radius: 3px;
-	/* background-color: #FFF; */
-	/* color: red; */
-	/* color: var(--draw-color); */
-	/* background: transparent; */
 }
 
 .custom-field.three .border::before,

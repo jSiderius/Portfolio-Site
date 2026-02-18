@@ -81,7 +81,7 @@ function UserInputForm() {
 
             <label className="custom-field one">
               <textarea placeholder="" rows={4} name="message" required />
-              <span className="placeholder">Message</span>
+              <span className="placeholder text-area-placeholder">Message</span>
             </label>
 
             <div
