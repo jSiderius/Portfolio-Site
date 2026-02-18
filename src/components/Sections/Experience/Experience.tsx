@@ -61,7 +61,7 @@ export default function Experience() {
 
   return (
     <section className="experience-top-container">
-      <h1 className="section-header">Experience</h1>
+      <h1 className="section-header experience-header">Experience</h1>
       <div className="experience-panel-container">
         <LeftPanel />
         <ExperienceDataPanel selectedId={selectedId} />

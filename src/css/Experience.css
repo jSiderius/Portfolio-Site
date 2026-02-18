@@ -8,14 +8,11 @@
 	text-decoration: underline;
 	text-underline-offset: 10px;
 	flex: 0;
-	margin-bottom: 1em;
-	/* margin-left: 10px; */
+	margin: 1em 0 1em 0;
 }
 
 .experience-panel-container {
 	width: 100%;
-	/* display: flex; */
-	/* gap: 60px; */
 	display: grid;
 	gap: 2em;
 }
