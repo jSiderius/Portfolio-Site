@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../../../css/Contact.css";
 import "../../../css/Input.css";
 import "../../../css/CustomBorderEffect.css";
@@ -31,6 +31,56 @@ function Contact() {
 
 function UserInputForm() {
   const [result, setResult] = useState("");
+  const [isAnimating, setIsAnimating] = useState<boolean>(false);
+
+  const handleEnter = () => {
+    // console.log("handleEnter");
+    // if (isAnimating) {
+    //   return;
+    // }
+    // setIsAnimating(true);
+  };
+
+  const handleExit = () => {
+    // console.log("handleExit");
+  };
+
+  const handleEnterHB = () => {
+    // console.log("enter HB");
+  };
+
+  const handleExitHB = () => {
+    // console.log("handleExit HB");
+  };
+
+  const handleAnimationEnd = () => {
+    setIsAnimating(false);
+    // console.log("hover container end anim");
+  };
+
+  const handleAnimationEndAlt = () => {
+    // console.log("hover container end anim");
+  };
+
+  const handleAnimationStartContainer = (
+    e: React.TransitionEvent<HTMLDivElement>,
+  ) => {
+    if (e.propertyName !== "transform") return;
+    setIsAnimating(true);
+  };
+
+  const handleAnimationEndContainer = (
+    e: React.TransitionEvent<HTMLDivElement>,
+  ) => {
+    if (e.propertyName !== "transform") return;
+    setIsAnimating(false);
+  };
+
+  useEffect(() => {
+    if (isAnimating) {
+    } else {
+    }
+  }, [isAnimating]);
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -47,8 +97,23 @@ function UserInputForm() {
   };
 
   return (
-    <div className="form-container">
-      <div className="form-inner">
+    <div
+      className="form-container"
+      onTransitionStart={handleAnimationStartContainer}
+      onTransitionEnd={handleAnimationEndContainer}
+    >
+      <div
+        className="hover-hitbox"
+        onPointerEnter={handleEnterHB}
+        onPointerLeave={handleExitHB}
+        onTransitionEnd={handleAnimationEndAlt}
+      />
+      <div
+        className={`form-inner ${isAnimating ? "is-animating" : ""}`}
+        onPointerEnter={handleEnter}
+        onPointerLeave={handleExit}
+        onTransitionEnd={handleAnimationEnd}
+      >
         <div className="form-front">
           <GlowBox />
           <img className="hover-icon" src={hover_icon} alt="" />

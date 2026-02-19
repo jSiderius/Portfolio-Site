@@ -8,6 +8,7 @@
 }
 
 .form-container {
+	position: relative;
 	width: 90%;
 	aspect-ratio: 2.2;
 	border-radius: 10px;
@@ -16,9 +17,25 @@
 	cursor: pointer;
 }
 
-.form-inner {
-	grid-template-columns: 100%;
+.form-inner:hover{ /* Hover starting or releasing should trigger animation */
+	transform: rotateY(180deg);
+}
+
+.form-inner.is-animating{
 	pointer-events: none;
+}
+
+.form-front{
+	pointer-events: none;
+}
+
+.hover-hitbox:hover ~ .form-inner, .form-container:focus-within .form-inner{
+  transform: rotateY(180deg);
+}
+
+.form-inner {
+	z-index: 101;
+	grid-template-columns: 100%;
 	display: grid;
 	position: relative;
 	transition: transform 0.6s;
@@ -26,9 +43,17 @@
 	border-radius: inherit;
 }
 
-.form-container:hover .form-inner, .form-container:focus-within .form-inner{
-  transform: rotateY(180deg);
+.hover-hitbox {
+	/* pointer-events: none; */
+	position: absolute;
+	inset: 0;
+	z-index: 100;
 }
+
+.hover-hitbox:hover {
+	background-color: rgba(1, 0, 0, 0.25);
+}
+
 
 .form-front,
 .form-back{
@@ -39,7 +64,6 @@
 }
 
 .form-front {
-	
 	aspect-ratio: 2.2;
 	position: relative;
 	border: 1px solid black;
