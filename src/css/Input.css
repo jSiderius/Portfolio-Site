@@ -49,10 +49,6 @@
 		color 0.3s ease;
 }
 
-.custom-field .text-area-placeholder{
-	top: calc(50% - 0.5em) !important;
-}
-
 .custom-field textarea + .placeholder {
 	top: 38px;
 }
@@ -85,10 +81,15 @@
 	padding: 0px 0.3125em;
 }
 
+.custom-field.one .placeholder{
+	top: calc(50% - 0.5em);
+}
+
 .custom-field.one input:not(:placeholder-shown) + .placeholder,
-.custom-field.one input:focus + .placeholder{
-	top: 20px;
-	background-color: #fff;
+.custom-field.one input:focus + .placeholder, 
+.custom-field.one textarea:not(:placeholder-shown) + .placeholder,
+.custom-field.one textarea:focus + .placeholder{
+	top: -0.4em;
 }
 
 /* TWO */
